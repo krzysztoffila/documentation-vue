@@ -10,6 +10,20 @@
     </main>
   </div>
 </template>
+<script>
+import NavComponent from "@/components/layout/nav-component.vue";
+import LeftMenu from "@/components/layout/left-menu.vue";
+import RightMenu from "@/components/layout/right-menu.vue";
+
+export default {
+  components: {
+    NavComponent,
+    LeftMenu,
+    RightMenu,
+  },
+};
+</script>
+
 
 <style lang="scss">
 #app {

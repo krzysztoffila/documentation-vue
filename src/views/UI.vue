@@ -3,7 +3,7 @@
     <page-title>Tytuł Strony</page-title>
     <section-title>Tytuł Sekcji</section-title>
     <hash />
-    <decription />
+    <description />
     <button-component />
     <info></info>
     <info type="warning" />

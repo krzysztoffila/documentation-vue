@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import Hash from "@/components/page-elements/hash.vue";
 export default {
   components: {
     Hash,

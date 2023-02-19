@@ -15,4 +15,8 @@ export default {
 </script>
 
 <style>
+div {
+  font-size: 30px;
+  margin-left: 20px;
+}
 </style>

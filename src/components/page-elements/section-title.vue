@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Hash from "@/components/page-elements/Hash.vue";
+import Hash from "@/components/page-elements/hash.vue";
 export default {
   components: {
     Hash,

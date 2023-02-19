@@ -1,6 +1,5 @@
 <template>
   <section>
-    <!-- w page-title i section-title powinien być hash -->
     <page-title>Tytuł Strony</page-title>
     <section-title>Tytuł Sekcji</section-title>
     <hash />
@@ -26,19 +25,27 @@
 </template>
 
 <script>
-import CodeComponent from "@/components/page-elements/code.vue";
-import Related from "@/components/page-elements/related.vue";
-import Pagination from "@/components/page-elements/pagination.vue";
-import Info from "@/components/page-elements/info.vue";
+import PageTitle from "@/components/page-elements/page-title.vue";
+import SectionTitle from "@/components/page-elements/section-title.vue";
 import Hash from "@/components/page-elements/hash.vue";
+import Description from "@/components/page-elements/description.vue";
+import ButtonComponent from "@/components/page-elements/button-component.vue";
+import Info from "@/components/page-elements/info.vue";
+import CodeComponent from "@/components/page-elements/code.vue";
+import Pagination from "@/components/page-elements/pagination.vue";
+import Related from "@/components/page-elements/related.vue";
 
 export default {
   components: {
-    CodeComponent,
-    Related,
-    Pagination,
-    Info,
+    PageTitle,
+    SectionTitle,
     Hash,
+    Description,
+    ButtonComponent,
+    Info,
+    CodeComponent,
+    Pagination,
+    Related,
   },
 };
 </script>

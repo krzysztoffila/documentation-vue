@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import copyToClipboard from "@/helpers/copy-to-clipboard.js";
 export default {
   props: {
     code: String,
@@ -25,7 +26,7 @@ export default {
     },
   },
   methods: {
-    copyToClipboard(content) {},
+    copyToClipboard,
     setCopied(copied) {
       this.copied = copied;
     },

@@ -15,4 +15,7 @@ export default {
 </script>
 
 <style>
+.page-title {
+  display: flex;
+}
 </style>

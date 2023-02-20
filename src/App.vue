@@ -26,4 +26,8 @@ export default {
 
 
 <style lang="scss">
+main {
+  display: flex;
+  justify-content: space-between;
+}
 </style>

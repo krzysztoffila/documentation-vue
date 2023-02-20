@@ -3,7 +3,7 @@
     <hr />
     <div class="section-title__container">
       <hash small />
-      <slot></slot>
+      <h2>Podpunkt 1</h2>
     </div>
   </div>
 </template>
@@ -17,5 +17,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.section-title__container {
+  display: flex;
+  & h2 {
+    line-height: 50px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+}
 </style>

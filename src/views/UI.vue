@@ -1,7 +1,7 @@
 <template>
   <section>
-    <page-title>Tytuł Strony</page-title>
-    <section-title>Tytuł Sekcji</section-title>
+    <page-title />
+    <section-title />
     <hash />
     <description />
     <button-component />

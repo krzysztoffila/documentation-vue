@@ -34,5 +34,12 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+pre {
+  border: 1px solid black;
+}
+.code__clipboard-container {
+  display: inline-block;
+  text-align: right;
+}
 </style>

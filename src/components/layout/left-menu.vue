@@ -1,6 +1,6 @@
 <template>
-  <aside class="left-menu">
-    <b-list-group>
+  <aside class="left-menu p-4 m-1">
+    <b-list-group class="left__menu--items">
       <b-list-group-item href="#" variant="dark"
         >left-menu link</b-list-group-item
       >
@@ -23,7 +23,12 @@ export default {};
 
 <style>
 .left-menu {
+  /* background-color: red; */
+  width: 15%;
   display: flex;
   align-items: left;
 }
+/* .left__menu--items {
+  width: 90%;
+} */
 </style>

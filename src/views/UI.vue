@@ -52,6 +52,6 @@ export default {
 
 <style>
 section {
-  width: 80%;
+  width: 70%;
 }
 </style>

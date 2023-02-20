@@ -1,9 +1,9 @@
 <template>
   <div class="related">
-    <h4>Related</h4>
-    <ul>
-      <li></li>
-    </ul>
+    <!-- <h4>Related</h4> -->
+    <!-- <ul> -->
+    <!-- <li></li> -->
+    <!-- </ul> -->
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="page-title">
     <hash small />
-    <h1 class="my-5 p-3">Tytuł</h1>
+    <h1>Tytuł</h1>
   </div>
 </template>
 
@@ -15,10 +15,4 @@ export default {
 </script>
 
 <style>
-.page-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  float: left;
-}
 </style>

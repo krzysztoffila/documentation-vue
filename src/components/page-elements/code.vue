@@ -2,7 +2,7 @@
   <pre>
     <div class="code__clipboard-container">
         <div>Copied!</div>
-        <svg></svg>
+        <!-- <svg></svg> -->
     </div>
     <code>{{coloredCode}}</code>
 </pre>

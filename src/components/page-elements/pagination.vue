@@ -1,7 +1,7 @@
 <template>
-<div>
-    //linki
-</div>
+  <div>
+    <!-- //linki -->
+  </div>
 </template>
 
 <script>

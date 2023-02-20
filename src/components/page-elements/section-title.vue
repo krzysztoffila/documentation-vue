@@ -18,7 +18,4 @@ export default {
 </script>
 
 <style>
-.section-title__container:hover {
-  /* po najechaniu wyswietlanie hash */
-}
 </style>

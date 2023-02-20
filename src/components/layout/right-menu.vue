@@ -1,10 +1,18 @@
 <template>
   <aside class="right-menu">
     <b-list-group>
-      <b-list-group-item href="#">right-menu link</b-list-group-item>
-      <b-list-group-item href="#">right-menu link</b-list-group-item>
-      <b-list-group-item href="#">right-menu link</b-list-group-item>
-      <b-list-group-item href="#">right-menu link</b-list-group-item>
+      <b-list-group-item href="#" variant="dark"
+        >right-menu link</b-list-group-item
+      >
+      <b-list-group-item href="#" variant="dark"
+        >right-menu link</b-list-group-item
+      >
+      <b-list-group-item href="#" variant="dark"
+        >right-menu link</b-list-group-item
+      >
+      <b-list-group-item href="#" variant="dark"
+        >right-menu link</b-list-group-item
+      >
     </b-list-group>
   </aside>
 </template>

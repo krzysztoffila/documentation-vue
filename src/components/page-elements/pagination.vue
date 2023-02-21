@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <!-- //linki -->
+  <div class="pagination">
+    <div class="overflow-auto">
+      <b-pagination :prev="prev" :next="next"></b-pagination>
+    </div>
   </div>
 </template>
 
@@ -14,4 +16,8 @@ export default {
 </script>
 
 <style>
+.pagination {
+  display: flex;
+  justify-content: center;
+}
 </style>

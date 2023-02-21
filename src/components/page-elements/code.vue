@@ -4,7 +4,8 @@
         <div>Copied!</div>
         <!-- <svg></svg> -->
     </div>
-    <code>{{coloredCode}}</code>
+    <code>{{coloredCode}}
+    </code>
 </pre>
 </template>
 
@@ -36,10 +37,14 @@ export default {
 
 <style lang="scss">
 pre {
+  display: flex;
+  min-height: 300px;
+  background-color: #d3d3d3;
   border: 1px solid black;
 }
 .code__clipboard-container {
   display: inline-block;
+  justify-content: right;
   text-align: right;
 }
 </style>

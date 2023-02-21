@@ -1,5 +1,5 @@
 <template>
-  <div class="button-component">
+  <div class="button-component m-3 p-1">
     <b-button pill variant="success">Przycisk do klikania</b-button>
   </div>
 </template>
@@ -10,6 +10,8 @@ export default {};
 
 <style>
 .button-component {
-  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  /* text-align: center; */
 }
 </style>

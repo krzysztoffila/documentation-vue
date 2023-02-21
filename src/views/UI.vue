@@ -5,7 +5,7 @@
     <hash />
     <description />
     <button-component />
-    <info></info>
+    <info />
     <info type="warning" />
     <info type="danger" />
     <code-component extension="vue" code="<h1>test</h1>" />

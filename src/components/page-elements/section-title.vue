@@ -1,7 +1,7 @@
 <template>
-  <div class="section-title">
+  <div class="section__title">
     <hr />
-    <div class="section-title__container">
+    <div class="section__title__container">
       <hash small />
       <h2>Podpunkt 1</h2>
     </div>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
-.section-title__container {
+.section__title__container {
   display: flex;
   & h2 {
     line-height: 50px;

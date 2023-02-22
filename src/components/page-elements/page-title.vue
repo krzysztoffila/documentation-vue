@@ -1,5 +1,5 @@
 <template>
-  <div class="page-title">
+  <div class="page__title">
     <hash small />
     <h1>Tytuł Tematu h1</h1>
   </div>
@@ -15,10 +15,10 @@ export default {
 </script>
 
 <style>
-.page-title {
+.page__title {
   display: flex;
 }
-.page-title h1 {
+.page__title h1 {
   margin-top: 20px;
   line-height: 50px;
   padding: 10px;

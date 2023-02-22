@@ -1,6 +1,6 @@
 <template>
-  <div class="description-container m-3">
-    <div class="description-container__text p-4 m-1">
+  <div class="description__container m-3">
+    <div class="description__container__text p-4 m-1">
       <p>
         <b>DESCRIPTION: </b>Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Minima inventore error dolorum corporis. Quisquam dolorem
@@ -21,7 +21,7 @@ export default {};
 </script>
 
 <style>
-.description-container {
+.description__container {
   border: 1px solid black;
   border-radius: 20px;
 }

@@ -1,6 +1,6 @@
 <template>
   <pre>
-    <div class="code__clipboard-container">
+    <div class="code__clipboard__container">
         <div>Copied!</div>
         <!-- <svg></svg> -->
     </div>
@@ -42,7 +42,7 @@ pre {
   background-color: #d3d3d3;
   border: 1px solid black;
 }
-.code__clipboard-container {
+.code__clipboard__container {
   display: inline-block;
   justify-content: right;
   text-align: right;

@@ -1,8 +1,11 @@
 <template>
-  <div class="pagination">
-    <div class="overflow-auto">
-      <b-pagination :prev="prev" :next="next"></b-pagination>
-    </div>
+  <div class="pagination p-3">
+    <b-button class="pagination__right-button" variant="outline-primary">
+      <b-icon icon="chevron-left"></b-icon> Poprzedni
+    </b-button>
+    <b-button class="pagination__left" variant="outline-primary">
+      <b-icon icon="chevron-right"></b-icon> Następny
+    </b-button>
   </div>
 </template>
 
@@ -18,6 +21,6 @@ export default {
 <style>
 .pagination {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 </style>

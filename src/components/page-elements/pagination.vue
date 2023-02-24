@@ -1,9 +1,15 @@
 <template>
   <div class="pagination p-3">
-    <b-button class="pagination__right-button" variant="outline-primary">
+    <b-button
+      :class="`pagination__left-button`[prev]"
+      variant="outline-primary"
+    >
       <b-icon icon="chevron-left"></b-icon> Poprzedni
     </b-button>
-    <b-button class="pagination__left" variant="outline-primary">
+    <b-button
+      :class="`pagination__right-button`[next]"
+      variant="outline-primary"
+    >
       <b-icon icon="chevron-right"></b-icon> Następny
     </b-button>
   </div>

@@ -39,10 +39,13 @@ export default {};
   padding: 5px 0;
 }
 .right-menu__list__link a {
+  padding-left: 5px;
   text-decoration: none;
   color: #6c757d;
   &:hover {
     color: #212529;
+    border-left: 5px solid #198754;
+    border-radius: 2px;
   }
 }
 </style>

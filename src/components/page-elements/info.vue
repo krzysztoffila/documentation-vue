@@ -3,10 +3,10 @@
   <div class="info__container">
     <div :class="['info', type && `info--${type}`]">
       <div class="info__container__icon">
-        <b-icon icon="info-circle" variant="success" class="mx-2"></b-icon>
+        <b-icon icon="info-circle" :variant="type" class="mx-2"></b-icon>
       </div>
-      <div class="info__container__text">
-        <b>Info: </b><br />
+      <div class="info__container__text" :variant="type">
+        <b> | INFO |{{ type }} </b><br />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
           inventore error dolorum corporis. Quisquam dolorem consectetur fuga
@@ -32,12 +32,18 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .info {
   margin: 3em;
   padding: 2em;
   display: flex;
   border: 1px solid #198754;
   border-radius: 20px;
+  &--warning {
+    border: 1px solid #ffc107;
+  }
+  &--danger {
+    border: 1px solid #dc3545;
+  }
 }
 </style>

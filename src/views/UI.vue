@@ -9,12 +9,12 @@
     <info type="warning" />
     <info type="danger" />
     <code-component extension="vue" code="<h1>test</h1>" />
-    <pagination :next="{ title: `Artykuł 1`, link: `/Artykuł-1` }" />
+    <pagination :prev="{ title: `Artykuł 2`, link: `/Artykuł-2` }" />
     <pagination
       :next="{ title: `Artykuł 1`, link: `/Artykuł-1` }"
       :prev="{ title: `Artykuł 2`, link: `/Artykuł-2` }"
     />
-    <pagination :prev="{ title: `Artykuł 2`, link: `/Artykuł-2` }" />
+    <pagination :next="{ title: `Artykuł 1`, link: `/Artykuł-2` }" />
     <related
       :items="[
         { title: `Artykuł 1`, link: `/Artykuł-1` },

@@ -28,9 +28,6 @@ export default {};
 .left-menu__list__link {
   padding: 5px 0;
 }
-.left-menu__list__link::after {
-  text-decoration: underline;
-}
 .left-menu__list__link a {
   text-decoration: none;
   color: #6c757d;

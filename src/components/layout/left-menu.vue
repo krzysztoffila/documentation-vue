@@ -1,19 +1,12 @@
 <template>
-  <aside class="left-menu p-4 m-1">
-    <b-list-group class="left__menu--items">
-      <b-list-group-item href="#" variant="dark"
-        >left-menu link</b-list-group-item
-      >
-      <b-list-group-item href="#" variant="dark"
-        >left-menu link</b-list-group-item
-      >
-      <b-list-group-item href="#" variant="dark"
-        >left-menu link</b-list-group-item
-      >
-      <b-list-group-item href="#" variant="dark"
-        >left-menu link</b-list-group-item
-      >
-    </b-list-group>
+  <aside class="left-menu p-3">
+    <ul class="left-menu__list">
+      <li class="left-menu__list__link"><a href="#">Artykuł 1</a></li>
+      <li class="left-menu__list__link"><a href="#">Artykuł 2</a></li>
+      <li class="left-menu__list__link"><a href="#">Artykuł 3</a></li>
+      <li class="left-menu__list__link"><a href="#">Artykuł 4</a></li>
+      <li class="left-menu__list__link"><a href="#">Artykuł 5</a></li>
+    </ul>
   </aside>
 </template>
 
@@ -21,14 +14,28 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss">
 .left-menu {
-  /* background-color: red; */
   width: 15%;
   display: flex;
   align-items: left;
 }
-/* .left__menu--items {
-  width: 90%;
-} */
+.left-menu__list {
+  width: 100%;
+  list-style-type: none;
+  letter-spacing: 1px;
+}
+.left-menu__list__link {
+  padding: 5px 0;
+}
+.left-menu__list__link::after {
+  text-decoration: underline;
+}
+.left-menu__list__link a {
+  text-decoration: none;
+  color: #6c757d;
+  &:hover {
+    color: #212529;
+  }
+}
 </style>

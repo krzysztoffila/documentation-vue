@@ -22,10 +22,12 @@ export default {
     default: "",
   },
   data() {
-    icons: {
-      warning: "";
-      danger: "";
-    }
+    return {
+      icons: {
+        warning: "",
+        danger: "",
+      },
+    };
   },
 };
 </script>

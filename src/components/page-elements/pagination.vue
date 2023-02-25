@@ -5,7 +5,7 @@
       class="pagination__left-button"
       variant="outline-primary"
     >
-      <b-icon class="pagination__left__icon" icon="chevron-left"></b-icon>
+      <b-icon class="pagination__left-icon" icon="chevron-left"></b-icon>
       Poprzedni
     </b-button>
     <b-button
@@ -13,7 +13,7 @@
       class="pagination__right-button"
       variant="outline-primary"
     >
-      <b-icon class="pagination__right__icon" icon="chevron-right"></b-icon>
+      <b-icon class="pagination__right-icon" icon="chevron-right"></b-icon>
       Następny
     </b-button>
   </div>

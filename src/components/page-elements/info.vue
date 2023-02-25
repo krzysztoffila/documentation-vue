@@ -1,10 +1,10 @@
 <template>
   <!-- w zaleznosci od typu zmiana koloru i ikonki  uzyc if https://bootstrap-vue.org/docs/components/card#background-and-border-variants-->
   <div :class="['info', type && `info--${type}`]" class="info__container">
-    <div class="info__container__icon">
+    <div class="info__container-icon">
       <b-icon icon="info-circle" :variant="type" class="mx-2"></b-icon>
     </div>
-    <div class="info__container__text" :variant="type">
+    <div class="info__container-text" :variant="type">
       <b> | INFO |{{ type }} </b><br />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima

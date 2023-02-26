@@ -2,7 +2,24 @@
   <!-- w zaleznosci od typu zmiana koloru i ikonki  uzyc if https://bootstrap-vue.org/docs/components/card#background-and-border-variants-->
   <div :class="['info', type && `info--${type}`]" class="info__container">
     <div class="info__container-icon">
-      <b-icon icon="info-circle" :variant="type" class="mx-2"></b-icon>
+      <b-icon
+        v-if="type == info"
+        icon="info-circle"
+        :variant="type"
+        class="mx-2"
+      ></b-icon>
+      <b-icon
+        v-else-if="type == `info--warning`"
+        icon="exclamation-circle"
+        :variant="type"
+        class="mx-2"
+      ></b-icon>
+      <b-icon
+        v-else-if="type == `info--danger`"
+        icon="exclamation-triangle"
+        :variant="type"
+        class="mx-2"
+      ></b-icon>
     </div>
     <div class="info__container-text" :variant="type">
       <b> | INFO |{{ type }} </b><br />

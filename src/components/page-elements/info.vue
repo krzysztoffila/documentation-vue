@@ -4,19 +4,19 @@
     <div class="info__container-icon">
       <!-- ikony -->
       <b-icon
-        v-if="type == info"
+        v-if="info"
         icon="info-circle"
         :variant="type"
         class="mx-2"
       ></b-icon>
       <b-icon
-        v-else-if="type == `info--warning`"
+        v-else-if="type == `warning`"
         icon="exclamation-circle"
         :variant="type"
         class="mx-2"
       ></b-icon>
       <b-icon
-        v-else-if="type == `info--danger`"
+        v-else-if="type == `danger`"
         icon="exclamation-triangle"
         :variant="type"
         class="mx-2"

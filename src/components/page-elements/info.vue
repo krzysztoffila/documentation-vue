@@ -2,6 +2,7 @@
   <!-- w zaleznosci od typu zmiana koloru i ikonki  uzyc if https://bootstrap-vue.org/docs/components/card#background-and-border-variants-->
   <div :class="['info', type && `info--${type}`]" class="info__container">
     <div class="info__container-icon">
+      <!-- ikony -->
       <b-icon
         v-if="type == info"
         icon="info-circle"

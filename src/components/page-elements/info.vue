@@ -1,11 +1,10 @@
 <template>
-  <!-- w zaleznosci od typu zmiana koloru i ikonki  uzyc if https://bootstrap-vue.org/docs/components/card#background-and-border-variants-->
   <div :class="['info', type && `info--${type}`]" class="info__container">
-    <div class="info__container__icon">
-      <b-icon icon="info-circle" :variant="type" class="mx-2"></b-icon>
+    <div class="info__container-icon mx-2">
+      <b-icon :class="info" :icon="icons[type]" :variant="type"></b-icon>
     </div>
-    <div class="info__container__text" :variant="type">
-      <b> | INFO |{{ type }} </b><br />
+    <div class="info__container-text" :variant="type">
+      <b>{{ type }} </b><br />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
         inventore error dolorum corporis. Quisquam dolorem consectetur fuga
@@ -36,8 +35,9 @@ export default {
   data() {
     return {
       icons: {
-        warning: "",
-        danger: "",
+        info: "lightbulb",
+        warning: "exclamation-circle",
+        danger: "exclamation-triangle",
       },
     };
   },

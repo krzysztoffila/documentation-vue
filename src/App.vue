@@ -31,7 +31,7 @@ export default {
 main {
   // colors: #242424;
   // colors: #2f2f2f;
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
   // background-color: #242424;
   // color: #fff;

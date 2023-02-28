@@ -11,6 +11,8 @@
   </div>
 </template>
 <script>
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
 import NavComponent from "@/components/layout/nav-component.vue";
 import LeftMenu from "@/components/layout/left-menu.vue";
 import RightMenu from "@/components/layout/right-menu.vue";

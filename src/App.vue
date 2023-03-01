@@ -29,10 +29,10 @@ export default {
 
 <style lang="scss">
 main {
+  display: flex;
+  justify-content: space-between;
   // colors: #242424;
   // colors: #2f2f2f;
-  display: flex !important;
-  justify-content: space-between;
   // background-color: #242424;
   // color: #fff;
 }

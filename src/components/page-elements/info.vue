@@ -10,23 +10,14 @@
         inventore error dolorum corporis. Quisquam dolorem consectetur fuga
         tenetur quas porro?
       </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
-        facilis non molestiae quo id velit totam. Vel impedit nam fugiat
-        pariatur culpa, voluptatibus eaque. Sed itaque eligendi minus mollitia
-        eum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
-        facilis non molestiae quo id velit totam. Vel impedit nam fugiat
-        pariatur culpa, voluptatibus eaque. Sed itaque eligendi minus mollitia
-        eum.
-      </p>
     </div>
   </div>
 </template>
 
 <script>
+// require("@/assets/bootstrap-icons/lightbulb.svg”)
+// require("@/assets/bootstrap-icons/exclamation-circle.svg”)
+// require("@/assets/bootstrap-icons/exclamation-triangle.svg”)
 export default {
   props: {
     type: String,

@@ -6,7 +6,7 @@
     </div>
     <code>{{coloredCode}}
     </code>
-</pre>
+  </pre>
 </template>
 
 <script>

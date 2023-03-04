@@ -1,5 +1,5 @@
 <template>
-  <div :class="['info', type && `info--${type}`]" class="info__container">
+  <div :class="['info', `info--${type}`]" class="info__container">
     <div class="info__container-icon mx-2">
       <img
         :src="require(`@/assets/bootstrap-icons/${icons[type]}.svg`)"

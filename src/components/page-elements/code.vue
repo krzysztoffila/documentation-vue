@@ -1,11 +1,13 @@
 <template>
   <pre>
-    <div class="code__clipboard__container">
-        <div>Copied!</div>
-        <!-- <svg></svg> -->
-    </div>
-    <code>{{coloredCode}}
+  <div class="code__clipboard__container">
+    <button v-if="supportsCB" @click="copyToClipboard">Copy</button>
+  <div v-if="message">{{message}}</div>
+  </div>
+    <code class="code__template__container px-5">
+      {{coloredCode}}
     </code>
+  
   </pre>
 </template>
 
@@ -19,7 +21,14 @@ export default {
   data() {
     return {
       copied: false,
+      supportsCB: false,
+      message: "",
     };
+  },
+  created() {
+    if (navigator.clipboard) {
+      this.supportsCB = true;
+    }
   },
   computed: {
     coloredCode() {
@@ -37,14 +46,16 @@ export default {
 
 <style lang="scss">
 pre {
-  display: flex;
   min-height: 300px;
   background-color: #d3d3d3;
   border: 1px solid black;
 }
 .code__clipboard__container {
-  display: inline-block;
+  display: flex;
   justify-content: right;
   text-align: right;
+  & button {
+    cursor: pointer;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 export default function copyToClipboard(content) {
-    navigator.clipboard.writeText(this.coloredCode)
+    navigator.clipboard.writeText(content.toString())
         .then(() => {
             this.message = 'Copied!';
         })

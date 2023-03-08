@@ -1,9 +1,10 @@
 <template>
   <pre>
-  <div class="code__clipboard__container">
-    <button v-if="supportsCB" @click="copyToClipboard">Copy</button>
-  <div v-if="message">{{message}}</div>
+  <div class="code__clipboard__container m-2">
+    <p class="m-2">{{extension}}</p>
+    <button class="btn px-4" v-if="supportsCB" @click="copyToClipboard(coloredCode)">Copy</button>
   </div>
+  <div class="code__clipboard--copied" v-if="message">{{message}}</div>
     <code class="code__template__container px-5">
       {{coloredCode}}
     </code>
@@ -52,10 +53,21 @@ pre {
 }
 .code__clipboard__container {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   text-align: right;
   & button {
+    justify-content: right;
     cursor: pointer;
+    color: #d3d3d3;
+    background-color: #6c757d;
+    &:hover {
+      color: #f8f9fa;
+      background-color: #343a40;
+    }
   }
+}
+.code__clipboard--copied {
+  display: flex;
+  justify-content: right;
 }
 </style>

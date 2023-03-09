@@ -30,5 +30,6 @@ export default {
 main {
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
 }
 </style>

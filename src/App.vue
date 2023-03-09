@@ -29,11 +29,7 @@ export default {
 
 <style lang="scss">
 main {
-  // colors: #242424;
-  // colors: #2f2f2f;
-  display: flex !important;
+  display: flex;
   justify-content: space-between;
-  // background-color: #242424;
-  // color: #fff;
 }
 </style>

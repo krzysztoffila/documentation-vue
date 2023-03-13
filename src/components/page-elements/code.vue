@@ -8,7 +8,6 @@
     <code class="code__template__container px-5">
       {{coloredCode}}
     </code>
-  
   </pre>
 </template>
 
@@ -47,7 +46,7 @@ export default {
 
 <style lang="scss">
 pre {
-  min-height: 300px;
+  min-height: 400px;
   background-color: #d3d3d3;
   border: 1px solid black;
 }

@@ -1,13 +1,13 @@
 <template>
   <pre>
-  <div class="code__clipboard__container m-2">
+  <div class="code__clipboard__container">
     <p class="m-2">{{extension}}</p>
-    <button class="btn px-4" v-if="supportsCB" @click="copyToClipboard(coloredCode)">Copy</button>
+    <button class="btn mx-2 px-4" v-if="supportsCB" @click="copyToClipboard(coloredCode)">Copy</button>
   </div>
   <div class="code__clipboard--copied" v-if="message">{{message}}</div>
-    <code class="code__template__container px-5">
-      {{coloredCode}}
-    </code>
+      <highlight-code class="highlight-code" lang="javascript">
+			{{coloredCode}}
+		</highlight-code>
   </pre>
 </template>
 
@@ -47,7 +47,7 @@ export default {
 <style lang="scss">
 pre {
   min-height: 400px;
-  background-color: #d3d3d3;
+  background-color: #f0f0f0;
   border: 1px solid black;
 }
 .code__clipboard__container {
@@ -68,5 +68,8 @@ pre {
 .code__clipboard--copied {
   display: flex;
   justify-content: right;
+}
+.highlight-code {
+  border: none;
 }
 </style>

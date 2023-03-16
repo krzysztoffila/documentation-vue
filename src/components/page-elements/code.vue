@@ -1,18 +1,31 @@
 <template>
   <pre>
-  <div class="code__clipboard__container">
+  <div class="code__clipboard-container">
     <p class="m-2">{{extension}}</p>
     <button class="btn mx-2 px-4" v-if="supportsCB" @click="copyToClipboard(coloredCode)">Copy</button>
   </div>
-  <div class="code__clipboard--copied" v-if="message">{{message}}</div>
-      <highlight-code class="highlight-code" lang="javascript">
+  <div class="code__clipboard-message" v-if="message">{{message}}</div>
+      <highlight-code class="code__highlight-code" lang="javascript">
 			{{coloredCode}}
 		</highlight-code>
   </pre>
 </template>
 
 <script>
+import Vue from "vue";
+import VueHighlightJS from "vue-highlight.js";
+import css from "highlight.js/lib/languages/css";
+import javascript from "highlight.js/lib/languages/javascript";
+import vue from "vue-highlight.js/lib/languages/vue";
+import "highlight.js/styles/default.css";
 import copyToClipboard from "@/helpers/copy-to-clipboard.js";
+Vue.use(VueHighlightJS, {
+  languages: {
+    css,
+    javascript,
+    vue,
+  },
+});
 export default {
   props: {
     code: String,
@@ -50,7 +63,7 @@ pre {
   background-color: #f0f0f0;
   border: 1px solid black;
 }
-.code__clipboard__container {
+.code__clipboard-container {
   display: flex;
   justify-content: space-between;
   text-align: right;
@@ -65,11 +78,11 @@ pre {
     }
   }
 }
-.code__clipboard--copied {
+.code__clipboard-message {
   display: flex;
   justify-content: right;
 }
-.highlight-code {
+.code__highlight-code {
   border: none;
 }
 </style>

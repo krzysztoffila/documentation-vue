@@ -23,6 +23,9 @@ export default {
     LeftMenu,
     RightMenu,
   },
+  created() {
+    this.$router.push("ui");
+  },
 };
 </script>
 

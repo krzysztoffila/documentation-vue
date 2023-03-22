@@ -1,9 +1,4 @@
-export default function copyToClipboard(content) {
+export default async function copyToClipboard(content) {
+    return await
     navigator.clipboard.writeText(content.toString())
-        .then(() => {
-            this.message = 'Copied!';
-        })
-        .catch(() => {
-            this.message = 'Sorry, unable to copy to clipboard.'
-        });
 }

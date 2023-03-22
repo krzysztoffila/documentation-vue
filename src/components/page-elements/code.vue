@@ -2,9 +2,8 @@
   <pre>
   <div class="code__clipboard-container">
     <p class="m-2">{{extension}}</p>
-    <button class="btn mx-2 px-4" v-if="supportsCB" @click="copyToClipboard(coloredCode)">Copy</button>
+    <button class="btn mx-2 px-4" v-if="supportsCB" @click="copyHandler()">{{textButton}}</button>
   </div>
-  <div class="code__clipboard-message" v-if="message">{{message}}</div>
       <highlight-code class="code__highlight-code" lang="javascript">
 			{{coloredCode}}
 		</highlight-code>
@@ -35,7 +34,7 @@ export default {
     return {
       copied: false,
       supportsCB: false,
-      message: "",
+      textButton: "Copy",
     };
   },
   created() {
@@ -49,9 +48,16 @@ export default {
     },
   },
   methods: {
+    toggle() {
+      this.isActive = !this.enable;
+    },
     copyToClipboard,
     setCopied(copied) {
       this.copied = copied;
+    },
+    async copyHandler() {
+      await copyToClipboard(this.coloredCode);
+      this.textButton = "Copied!";
     },
   },
 };
@@ -77,10 +83,6 @@ pre {
       background-color: #343a40;
     }
   }
-}
-.code__clipboard-message {
-  display: flex;
-  justify-content: right;
 }
 .code__highlight-code {
   border: none;

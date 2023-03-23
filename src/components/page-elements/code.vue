@@ -59,7 +59,8 @@ export default {
       try {
         await copyToClipboard(this.coloredCode);
         this.textButton = "Copied!";
-      } catch {
+      } catch (e) {
+        console.log(e);
         this.textButton = "Error";
       }
     },

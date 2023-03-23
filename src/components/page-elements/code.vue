@@ -2,7 +2,7 @@
   <pre>
   <div class="code__clipboard-container">
     <p class="m-2">{{extension}}</p>
-    <button class="btn mx-2 px-4" v-if="supportsCB" @click="copyHandler()">{{textButton}}</button>
+    <button class="btn mx-2 px-4" v-if="supportsCB" @click="copyHandler">{{textButton}}</button>
   </div>
       <highlight-code class="code__highlight-code" lang="javascript">
 			{{coloredCode}}
@@ -56,8 +56,12 @@ export default {
       this.copied = copied;
     },
     async copyHandler() {
-      await copyToClipboard(this.coloredCode);
-      this.textButton = "Copied!";
+      try {
+        await copyToClipboard(this.coloredCode);
+        this.textButton = "Copied!";
+      } catch {
+        this.textButton = "Error";
+      }
     },
   },
 };

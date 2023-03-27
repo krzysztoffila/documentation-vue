@@ -42,11 +42,10 @@ export default {};
   padding-left: 5px;
   text-decoration: none;
   color: #6c757d;
-  text-underline-offset: 5px;
   &:hover {
     color: #212529;
-    text-decoration: underline;
-    transition: 0.2s all;
+    border-left: 5px solid #198754;
+    border-radius: 2px;
   }
 }
 </style>

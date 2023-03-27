@@ -1,16 +1,16 @@
 <template>
   <div class="pagination p-3">
     <b-button
-      v-if="prev"
-      class="pagination__button--prev"
+      :class="[('prev', prev && `${prev}`)]"
+      class="pagination__left-button"
       variant="outline-primary"
     >
       <b-icon class="pagination__left-icon" icon="chevron-left"></b-icon>
       Poprzedni
     </b-button>
     <b-button
-      v-if="next"
-      class="pagination__button--next"
+      :class="[('next', next && `${next}`)]"
+      class="pagination__right-button"
       variant="outline-primary"
     >
       <b-icon class="pagination__right-icon" icon="chevron-right"></b-icon>

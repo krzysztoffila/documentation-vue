@@ -60,7 +60,7 @@ export default {
         await copyToClipboard(this.coloredCode);
         this.textButton = "Copied!";
       } catch (e) {
-        console.error(e);
+        console.log(e);
         this.textButton = "Error";
       }
     },
@@ -76,7 +76,7 @@ pre {
 }
 .code__clipboard-container {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   text-align: right;
   & button {
     justify-content: right;

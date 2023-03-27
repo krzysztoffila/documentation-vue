@@ -61,7 +61,7 @@ export default {
         this.textButton = "Copied!";
       } catch (e) {
         console.error(e);
-        this.textButton = "Error";
+        this.textButton = "Error!";
       }
     },
   },

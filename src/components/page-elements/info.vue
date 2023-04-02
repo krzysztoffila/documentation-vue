@@ -49,8 +49,6 @@ export default {
 
 <style lang="scss">
 .info {
-  // margin: 3em;
-  // padding: 2em;
   display: flex;
   border: 1px solid #198754;
   border-radius: 20px;

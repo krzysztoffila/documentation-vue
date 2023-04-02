@@ -2,7 +2,6 @@
   <section>
     <page-title />
     <section-title />
-    <hash />
     <description />
     <button-component />
     <info />

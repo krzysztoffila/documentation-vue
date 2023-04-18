@@ -16,7 +16,7 @@ export default {};
 
 <style lang="scss">
 .left-menu {
-  width: 15%;
+  width: 20%;
   display: flex;
   align-items: left;
 }

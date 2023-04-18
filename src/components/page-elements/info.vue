@@ -1,27 +1,27 @@
 <template>
-  <!-- w zaleznosci od typu zmiana koloru i ikonki  uzyc if https://bootstrap-vue.org/docs/components/card#background-and-border-variants-->
-  <div :class="['info', type && `info--${type}`]" class="info__container">
-    <div class="info__container__icon">
-      <b-icon icon="info-circle" :variant="type" class="mx-2"></b-icon>
+  <div :class="['info', `info--${type}`]" class="info__container">
+    <div class="info__container-icon mx-2">
+      <img
+        :src="require(`@/assets/bootstrap-icons/${icons[type]}.svg`)"
+        alt="icon"
+        widht="25px"
+        height="25px"
+        :style="`fill:${type}`"
+      />
     </div>
-    <div class="info__container__text" :variant="type">
-      <b> | INFO |{{ type }} </b><br />
+    <div class="info__container-text">
+      <b class="info__container-title" :variant="type"
+        >{{ type.toUpperCase() }} </b
+      ><br />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
         inventore error dolorum corporis. Quisquam dolorem consectetur fuga
         tenetur quas porro?
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
-        facilis non molestiae quo id velit totam. Vel impedit nam fugiat
-        pariatur culpa, voluptatibus eaque. Sed itaque eligendi minus mollitia
-        eum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
-        facilis non molestiae quo id velit totam. Vel impedit nam fugiat
-        pariatur culpa, voluptatibus eaque. Sed itaque eligendi minus mollitia
-        eum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+        inventore error dolorum corporis. Quisquam dolorem consectetur fuga
+        tenetur quas porro?
       </p>
     </div>
   </div>
@@ -30,14 +30,17 @@
 <script>
 export default {
   props: {
-    type: String,
-    default: "",
+    type: {
+      type: String,
+      default: "info",
+    },
   },
   data() {
     return {
       icons: {
-        warning: "",
-        danger: "",
+        info: "lightbulb",
+        warning: "exclamation-circle",
+        danger: "exclamation-triangle",
       },
     };
   },
@@ -56,6 +59,12 @@ export default {
   }
   &--danger {
     border: 1px solid #dc3545;
+  }
+}
+.info__container {
+  transition: all 0.7s;
+  &:hover {
+    transform: scale(1.1);
   }
 }
 </style>

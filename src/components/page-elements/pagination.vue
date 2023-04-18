@@ -3,7 +3,7 @@
     <b-button
       v-if="prev"
       class="pagination__button--prev"
-      variant="outline-dark"
+      variant="outline-light"
     >
       <b-icon class="pagination__left-icon" icon="chevron-left"></b-icon>
       Previous
@@ -11,7 +11,7 @@
     <b-button
       v-if="next"
       class="pagination__button--next"
-      variant="outline-dark"
+      variant="outline-light"
     >
       Next
       <b-icon class="pagination__right-icon" icon="chevron-right"></b-icon>

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <b-navbar type="light" variant="light">
+    <b-navbar type="dark" variant="dark">
       <b-navbar-nav>
-        <b-nav-item href="#">Vue.js</b-nav-item>
+        <b-nav-item active href="#">Vue.js</b-nav-item>
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item href="#">Docs</b-nav-item>
-        <b-nav-item href="#">About</b-nav-item>
+        <b-nav-item active href="#">Docs</b-nav-item>
+        <b-nav-item active href="#">About</b-nav-item>
       </b-navbar-nav>
     </b-navbar>
   </div>

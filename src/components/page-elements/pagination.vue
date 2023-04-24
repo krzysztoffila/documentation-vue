@@ -3,18 +3,18 @@
     <b-button
       v-if="prev"
       class="pagination__button--prev"
-      variant="outline-primary"
+      variant="outline-light"
     >
       <b-icon class="pagination__left-icon" icon="chevron-left"></b-icon>
-      Poprzedni
+      Previous
     </b-button>
     <b-button
       v-if="next"
       class="pagination__button--next"
-      variant="outline-primary"
+      variant="outline-light"
     >
+      Next
       <b-icon class="pagination__right-icon" icon="chevron-right"></b-icon>
-      Następny
     </b-button>
   </div>
 </template>

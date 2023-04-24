@@ -23,13 +23,17 @@ export default {
     LeftMenu,
     RightMenu,
   },
+  created() {
+    this.$router.push("ui");
+  },
 };
 </script>
-
 
 <style lang="scss">
 main {
   display: flex;
   justify-content: space-between;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #213547;
 }
 </style>

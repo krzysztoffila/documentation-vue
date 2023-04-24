@@ -1,6 +1,6 @@
 <template>
-  <div :class="['info', `info--${type}`]" class="info__container">
-    <div class="info__container-icon mx-2">
+  <div :class="['info', `info--${type}`]" class="info__container m-3">
+    <div class="info__container-icon p-4 m-1">
       <img
         :src="require(`@/assets/bootstrap-icons/${icons[type]}.svg`)"
         alt="icon"
@@ -49,8 +49,6 @@ export default {
 
 <style lang="scss">
 .info {
-  margin: 3em;
-  padding: 2em;
   display: flex;
   border: 1px solid #198754;
   border-radius: 20px;
@@ -59,12 +57,6 @@ export default {
   }
   &--danger {
     border: 1px solid #dc3545;
-  }
-}
-.info__container {
-  transition: all 0.7s;
-  &:hover {
-    transform: scale(1.1);
   }
 }
 </style>

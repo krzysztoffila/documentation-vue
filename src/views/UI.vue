@@ -7,7 +7,10 @@
     <info />
     <info type="warning" />
     <info type="danger" />
-    <code-component extension="vue" code="<h1>test</h1>" />
+    <code-component
+      extension="vue"
+      code="const btn = document.querySelector('button');"
+    />
     <pagination :prev="{ title: `Artykuł 2`, link: `/Artykuł-2` }" />
     <pagination
       :next="{ title: `Artykuł 1`, link: `/Artykuł-1` }"

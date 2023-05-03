@@ -41,10 +41,10 @@ export default {};
 .right-menu__list__link a {
   padding-left: 5px;
   text-decoration: none;
-  color: #6c757d;
+  color: #b3bcc3;
   text-underline-offset: 5px;
   &:hover {
-    color: #212529;
+    color: #fff;
     text-decoration: underline;
     transition: 0.2s all;
   }

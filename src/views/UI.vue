@@ -29,7 +29,6 @@
 <script>
 import PageTitle from "@/components/page-elements/page-title.vue";
 import SectionTitle from "@/components/page-elements/section-title.vue";
-import Hash from "@/components/page-elements/hash.vue";
 import Description from "@/components/page-elements/description.vue";
 import ButtonComponent from "@/components/page-elements/button-component.vue";
 import Info from "@/components/page-elements/info.vue";
@@ -41,7 +40,6 @@ export default {
   components: {
     PageTitle,
     SectionTitle,
-    Hash,
     Description,
     ButtonComponent,
     Info,

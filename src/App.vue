@@ -34,6 +34,6 @@ main {
   display: flex;
   justify-content: space-between;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #213547;
+  background-color: #1a1a1a;
 }
 </style>

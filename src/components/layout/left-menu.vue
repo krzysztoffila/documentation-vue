@@ -30,9 +30,9 @@ export default {};
 }
 .left-menu__list__link a {
   text-decoration: none;
-  color: #6c757d;
+  color: #b3bcc3;
   &:hover {
-    color: #212529;
+    color: #fff;
   }
 }
 </style>

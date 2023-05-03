@@ -44,7 +44,7 @@ export default {};
   color: #6c757d;
   text-underline-offset: 5px;
   &:hover {
-    color: #212529;
+    color: #d5d8db;
     text-decoration: underline;
     transition: 0.2s all;
   }

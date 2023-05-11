@@ -9,7 +9,7 @@
         :style="`fill:${type}`"
       />
     </div>
-    <div class="info__container-text">
+    <div class="info__container-text p-4 m-1">
       <b class="info__container-title" :variant="type"
         >{{ type.toUpperCase() }} </b
       ><br />

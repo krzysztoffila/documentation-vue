@@ -1,6 +1,7 @@
 <template>
   <div>
     <b-navbar type="dark" variant="dark">
+      <img class="logo" src="@/assets/logo.svg" alt="icon" height="45px" />
       <b-navbar-nav>
         <b-nav-item active href="#">Vue.js</b-nav-item>
       </b-navbar-nav>

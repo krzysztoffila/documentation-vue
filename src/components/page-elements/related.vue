@@ -1,5 +1,5 @@
 <template>
-  <div class="related">
+  <div class="related m-3">
     <h3>Related</h3>
     <ul class="related__list m-1">
       <li class="related__link"><a href="#">Related 1</a></li>

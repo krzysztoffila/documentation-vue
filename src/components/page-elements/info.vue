@@ -1,7 +1,13 @@
 <template>
-  <div :class="['success', `success--${type}`]" class="info__container m-3">
+  <div :class="['info', `info--${type}`]" class="info__container m-3">
     <div class="info__container-icon p-4 m-1">
-      <b-icon :icon="`${icons[type]}`" :variant="type" height="25px"></b-icon>
+      <img
+        :src="require(`@/assets/bootstrap-icons/${icons[type]}.svg`)"
+        alt="icon"
+        widht="25px"
+        height="25px"
+        :style="`fill:${type}`"
+      />
     </div>
     <div class="info__container-text p-4 m-1">
       <b class="info__container-title" :variant="type"
@@ -26,13 +32,13 @@ export default {
   props: {
     type: {
       type: String,
-      default: "success",
+      default: "info",
     },
   },
   data() {
     return {
       icons: {
-        success: "lightbulb",
+        info: "lightbulb",
         warning: "exclamation-circle",
         danger: "exclamation-triangle",
       },
@@ -42,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss">
-.success {
+.info {
   display: flex;
   border: 1px solid #198754;
   border-radius: 20px;

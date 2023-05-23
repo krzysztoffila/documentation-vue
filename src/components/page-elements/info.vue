@@ -39,6 +39,7 @@ export default {
     return {
       icons: {
         info: "lightbulb",
+        success: "lightbulb",
         warning: "exclamation-circle",
         danger: "exclamation-triangle",
       },
@@ -50,8 +51,11 @@ export default {
 <style lang="scss">
 .info {
   display: flex;
-  border: 1px solid #198754;
+  border: 1px solid #17a2b8;
   border-radius: 20px;
+  &--success {
+    border: 1px solid #198754;
+  }
   &--warning {
     border: 1px solid #ffc107;
   }
@@ -60,3 +64,7 @@ export default {
   }
 }
 </style>
+
+
+
+

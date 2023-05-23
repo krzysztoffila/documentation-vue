@@ -5,6 +5,7 @@
     <description />
     <button-component />
     <info />
+    <info type="success" />
     <info type="warning" />
     <info type="danger" />
     <code-component

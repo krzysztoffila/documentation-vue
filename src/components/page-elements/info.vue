@@ -1,5 +1,5 @@
 <template>
-  <div :class="['info', `info--${type}`]" class="info__container m-3">
+  <div :class="['success', `success--${type}`]" class="info__container m-3">
     <div class="info__container-icon p-4 m-1">
       <b-icon :icon="`${icons[type]}`" :variant="type" height="25px"></b-icon>
     </div>
@@ -26,13 +26,12 @@ export default {
   props: {
     type: {
       type: String,
-      default: "info",
+      default: "success",
     },
   },
   data() {
     return {
       icons: {
-        info: "info-circle",
         success: "lightbulb",
         warning: "exclamation-circle",
         danger: "exclamation-triangle",
@@ -43,13 +42,10 @@ export default {
 </script>
 
 <style lang="scss">
-.info {
+.success {
   display: flex;
-  border: 1px solid #17a2b8;
+  border: 1px solid #198754;
   border-radius: 20px;
-  &--success {
-    border: 1px solid #198754;
-  }
   &--warning {
     border: 1px solid #ffc107;
   }

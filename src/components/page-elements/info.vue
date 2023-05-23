@@ -1,7 +1,13 @@
 <template>
   <div :class="['info', `info--${type}`]" class="info__container m-3">
     <div class="info__container-icon p-4 m-1">
-      <b-icon :icon="`${icons[type]}`" :variant="type" height="25px"></b-icon>
+      <img
+        :src="require(`@/assets/bootstrap-icons/${icons[type]}.svg`)"
+        alt="icon"
+        widht="25px"
+        height="25px"
+        :style="`fill:${type}`"
+      />
     </div>
     <div class="info__container-text p-4 m-1">
       <b class="info__container-title" :variant="type"
@@ -32,8 +38,8 @@ export default {
   data() {
     return {
       icons: {
-        info: "info-square",
-        success: "check2-square",
+        info: "lightbulb",
+        success: "lightbulb",
         warning: "exclamation-circle",
         danger: "exclamation-triangle",
       },

@@ -59,6 +59,11 @@ export default {
       try {
         await copyToClipboard(this.coloredCode);
         this.textButton = "Copied!";
+        setInterval(() => {
+          {
+            this.textButton = "Copy";
+          }
+        }, 3000);
       } catch (e) {
         console.error(e);
         this.textButton = "Error!";

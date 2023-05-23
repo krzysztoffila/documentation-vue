@@ -33,12 +33,12 @@ export default {};
 .right-menu__list {
   width: 100%;
   list-style-type: none;
-  letter-spacing: 1px;
 }
 .right-menu__list__link {
   padding: 5px 0;
 }
 .right-menu__list__link a {
+  font-size: 14px;
   padding-left: 5px;
   text-decoration: none;
   color: #b3bcc3;

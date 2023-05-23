@@ -1,5 +1,5 @@
 <template>
-  <pre>
+  <pre class="m-3">
   <div class="code__clipboard-container">
     <p class="m-2">{{extension}}</p>
     <button class="btn mx-2 px-4" v-if="supportsCB" @click="copyHandler">{{textButton}}</button>

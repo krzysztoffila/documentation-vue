@@ -6,6 +6,7 @@
         <b-nav-item active href="#">Vue.js</b-nav-item>
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
+        <button-toggle />
         <b-nav-item active href="#">Docs</b-nav-item>
         <b-nav-item active href="#">About</b-nav-item>
       </b-navbar-nav>
@@ -14,7 +15,12 @@
 </template>
 
 <script>
-export default {};
+import ButtonToggle from "@/components/page-elements/button-toggle.vue";
+export default {
+  components: {
+    ButtonToggle,
+  },
+};
 </script>
 
 <style>

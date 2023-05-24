@@ -59,10 +59,14 @@ export default {
       try {
         await copyToClipboard(this.coloredCode);
         this.textButton = "Copied!";
-        setInterval(() => {
-          {
-            this.textButton = "Copy";
-          }
+        const intervalId = setInterval(() => {
+          this.textButton = "Copy";
+          console.log("minely 3 sec");
+        }, 3000);
+        // Dodaj poniższy kod w odpowiednim miejscu, aby wyczyścić interwał po 3 sekundach (3000 ms)
+        setTimeout(() => {
+          clearInterval(intervalId);
+          console.log("koniec");
         }, 3000);
       } catch (e) {
         console.error(e);

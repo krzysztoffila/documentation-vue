@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss">
 pre {
-  min-height: 400px;
+  min-height: 200px;
   background-color: #f0f0f0;
   border: 1px solid black;
 }

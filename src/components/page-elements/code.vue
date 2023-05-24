@@ -57,13 +57,15 @@ export default {
     },
     async copyHandler() {
       try {
+        if (this.disableButton) {
+          return;
+        }
+        this.disableButton = true;
         await copyToClipboard(this.coloredCode);
         this.textButton = "Copied!";
-        const intervalId = setInterval(() => {
-          this.textButton = "Copy";
-        }, 3000);
         setTimeout(() => {
-          clearInterval(intervalId);
+          this.textButton = "Copy";
+          this.disableButton = false;
         }, 3000);
       } catch (e) {
         console.error(e);

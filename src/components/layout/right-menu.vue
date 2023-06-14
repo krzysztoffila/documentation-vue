@@ -1,5 +1,5 @@
 <template>
-  <aside class="right-menu p-3">
+  <aside class="right-menu p-3" :class="{ responsive: showAside }">
     <ul class="right-menu__list">
       <li class="right-menu__list__link">
         <a href="#">Podpunkt artykułu 1</a>
@@ -21,7 +21,16 @@
 </template>
 
 <script>
-export default {};
+import { mapMutations, mapState } from "vuex";
+
+export default {
+  computed: {
+    ...mapState("RightMenu", ["showAside"]),
+  },
+  methods: {
+    ...mapMutations("RightMenu", { toggleShowAside: "toggleShowRightAside" }),
+  },
+};
 </script>
 
 <style lang="scss">
@@ -38,7 +47,7 @@ export default {};
   padding: 5px 0;
 }
 .right-menu__list__link a {
-  font-size: 14px;
+  font-size: 12px;
   padding-left: 5px;
   text-decoration: none;
   color: #b3bcc3;
@@ -47,6 +56,23 @@ export default {};
     color: #fff;
     text-decoration: underline;
     transition: 0.2s all;
+  }
+}
+@media screen and (max-width: 992px) {
+  .right-menu__list {
+    font-size: 12px;
+    width: 120px;
+    position: fixed;
+    top: 86px;
+    right: -100%;
+    background-color: #343a40;
+    // transition: 0.3s;
+  }
+  .responsive .right-menu__list {
+    right: 0;
+  }
+  .right-menu__container {
+    width: 20%;
   }
 }
 </style>

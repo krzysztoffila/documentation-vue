@@ -9,12 +9,21 @@
         <b-nav-item active href="#">Docs</b-nav-item>
         <b-nav-item active href="#">About</b-nav-item>
       </b-navbar-nav>
+      <router-link to="/login"
+        ><b-icon icon="person-circle" height="20px"></b-icon
+        ><span>Login</span></router-link
+      >
     </b-navbar>
   </div>
 </template>
 
 <script>
-export default {};
+import Login from "@/views/login.vue";
+export default {
+  components: {
+    Login,
+  },
+};
 </script>
 
 <style>

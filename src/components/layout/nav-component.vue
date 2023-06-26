@@ -10,8 +10,8 @@
         <b-nav-item active href="#">About</b-nav-item>
       </b-navbar-nav>
       <router-link to="/login"
-        ><b-icon icon="person-circle" height="20px"></b-icon
-        ><span>Login</span></router-link
+        ><b-icon class="login__icon" icon="person-circle" height="20px"></b-icon
+        ><span class="login__text">Login</span></router-link
       >
     </b-navbar>
   </div>
@@ -26,5 +26,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.login__icon,
+.login__text {
+  color: #fff;
+}
 </style>

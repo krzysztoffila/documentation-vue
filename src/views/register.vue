@@ -50,7 +50,18 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+export default {
+  mounted() {
+    axios
+      .post(
+        "https://documentation-vue.projects.codennection.pl/api/auth/register"
+      )
+      .then((response) => {
+        console.log(response);
+      });
+  },
+};
 </script>
 
 <style>

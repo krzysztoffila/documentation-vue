@@ -6,9 +6,6 @@ import {
   BootstrapVue,
   IconsPlugin
 } from 'bootstrap-vue';
-// import axios, {isCancel, AxiosError} from 'axios';
-
-
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);

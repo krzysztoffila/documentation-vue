@@ -1,6 +1,6 @@
 <template>
   <div class="register__container">
-    <form>
+    <form method="POST">
       <div class="container">
         <h1>Register</h1>
         <p>Please fill in this form to create an account.</p>
@@ -57,8 +57,21 @@ export default {
       .post(
         "https://documentation-vue.projects.codennection.pl/api/auth/register"
       )
-      .then((response) => {
-        console.log(response);
+      .then((response) => (this.info = response.data.bpi))
+      // .catch((error) => alert(error.response.data.message));
+      .catch((error) => {
+        const {
+          response = {
+            message: "",
+            status: 0,
+            data: {},
+          },
+        } = error;
+        console.log(error);
+        const errMsg = response.data.data.errors.reduce((acc, cur) => {
+          return acc + cur;
+        });
+        console.log(errMsg);
       });
   },
 };

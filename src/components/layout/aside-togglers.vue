@@ -33,16 +33,17 @@ export default {
 <style>
 @media screen and (max-width: 992px) {
   .aside__tooglers__container {
+    padding: 2% 0;
     background: #343a40;
     display: flex;
     justify-content: space-between;
   }
   .aside__left__icon {
-    margin-left: 20px;
+    padding-left: 32px;
     color: white;
   }
   .aside__right__icon {
-    margin-right: 20px;
+    padding-right: 38px;
     color: white;
   }
 }

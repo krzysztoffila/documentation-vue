@@ -63,10 +63,9 @@ export default {
     font-size: 12px;
     width: 120px;
     position: fixed;
-    top: 86px;
+    top: 8.2em;
     right: -100%;
     background-color: #343a40;
-    // transition: 0.3s;
   }
   .responsive .right-menu__list {
     right: 0;

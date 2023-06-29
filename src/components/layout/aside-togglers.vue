@@ -33,7 +33,7 @@ export default {
 <style>
 @media screen and (max-width: 992px) {
   .aside__tooglers__container {
-    padding: 2% 0;
+    padding: 15px 0;
     background: #343a40;
     display: flex;
     justify-content: space-between;

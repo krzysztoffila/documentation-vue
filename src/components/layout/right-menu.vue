@@ -63,7 +63,7 @@ export default {
     font-size: 12px;
     width: 120px;
     position: fixed;
-    top: 8.2em;
+    top: 107px;
     right: -100%;
     background-color: #343a40;
   }

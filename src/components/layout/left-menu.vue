@@ -60,7 +60,7 @@ export default {
     font-size: 12px;
     width: 120px;
     position: fixed;
-    top: 8.2em;
+    top: 107px;
     left: -100%;
     background-color: #343a40;
     transition: 0.3s;

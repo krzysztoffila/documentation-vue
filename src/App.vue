@@ -16,8 +16,6 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import NavComponent from "@/components/layout/nav-component.vue";
 import LeftMenu from "@/components/layout/left-menu.vue";
 import RightMenu from "@/components/layout/right-menu.vue";
-// import axios from "axios";
-// import VueAxios from "vue-axios";
 
 export default {
   components: {
@@ -25,17 +23,9 @@ export default {
     LeftMenu,
     RightMenu,
   },
-  // mounted() {
-  //   axios
-  //     .post(
-  //       "https://documentation-vue.projects.codennection.pl/api/auth/register"
-  //     )
-  //     .then((response) => {
-  //       console.log(response);
-  //     });
-  // },
   created() {
     this.$router.push("ui");
+    this.$store.dispatch("Auth/autoLogin");
   },
 };
 </script>

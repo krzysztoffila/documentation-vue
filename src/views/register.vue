@@ -1,14 +1,21 @@
 <template>
   <div class="register__container">
-    <form method="POST">
+    <form @submit.prevent="registerUser">
       <div class="container">
         <h1>Register</h1>
         <p>Please fill in this form to create an account.</p>
         <hr />
         <label for="name"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="name" required />
+        <input
+          v-model="name"
+          type="text"
+          placeholder="Enter Username"
+          name="name"
+          required
+        />
         <label for="email"><b>Email</b></label>
         <input
+          v-model="email"
           type="text"
           placeholder="Enter Email"
           name="email"
@@ -17,6 +24,7 @@
         />
         <label for="password"><b>Password</b></label>
         <input
+          v-model="password"
           type="password"
           placeholder="Enter Password"
           name="password"
@@ -25,6 +33,7 @@
         />
         <label for="password-confirm"><b>Confirm Password</b></label>
         <input
+          v-model="passwordConfirm"
           type="password"
           placeholder="Confirm Password"
           name="password-confirm"
@@ -52,27 +61,41 @@
 <script>
 import axios from "axios";
 export default {
-  mounted() {
-    axios
-      .post(
-        "https://documentation-vue.projects.codennection.pl/api/auth/register"
-      )
-      .then((response) => (this.info = response.data.bpi))
-      // .catch((error) => alert(error.response.data.message));
-      .catch((error) => {
-        const {
-          response = {
-            message: "",
-            status: 0,
-            data: {},
-          },
-        } = error;
-        console.log(error);
-        const errMsg = response.data.data.errors.reduce((acc, cur) => {
-          return acc + cur;
+  data() {
+    return {
+      name: "",
+      email: "",
+      password: "",
+      passwordConfirm: "",
+    };
+  },
+  methods: {
+    registerUser() {
+      axios
+        .post(
+          "https://documentation-vue.projects.codennection.pl/api/auth/register",
+          {
+            name: this.name,
+            email: this.email,
+            password: this.password,
+            passwordConfirm: this.passwordConfirm,
+          }
+        )
+        .then((response) => {
+          this.$store.dispatch("Auth/register", response.data.data);
+        })
+        .catch((error) => {
+          console.error(error);
+          const errors = error.response?.data.data.errors;
+          if (errors === undefined) {
+            return alert("Wystąpił błąd. Przepraszamy");
+          }
+          const errMsg = errors.reduce((acc, cur) => {
+            return acc + " " + cur.message;
+          }, []);
+          alert(errMsg);
         });
-        console.log(errMsg);
-      });
+    },
   },
 };
 </script>

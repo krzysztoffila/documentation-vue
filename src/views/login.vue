@@ -4,6 +4,7 @@
       <div class="container">
         <label for="email"><b>Email</b></label>
         <input
+          v-model="email"
           type="text"
           placeholder="Enter Email"
           name="email"
@@ -12,6 +13,7 @@
         />
         <label for="psw"><b>Password</b></label>
         <input
+          v-model="password"
           type="password"
           placeholder="Enter Password"
           name="psw"
@@ -36,7 +38,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+};
 </script>
 
 <style>

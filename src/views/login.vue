@@ -1,6 +1,6 @@
 <template>
   <div class="login__container">
-    <form>
+    <form @submit.prevent="loginUser">
       <div class="container">
         <label for="email"><b>Email</b></label>
         <input
@@ -38,12 +38,46 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
       email: "",
       password: "",
     };
+  },
+  methods: {
+    loginUser() {
+      axios
+        .post(
+          "https://documentation-vue.projects.codennection.pl/api/auth/login",
+          {
+            email: this.email,
+            password: this.password,
+          }
+        )
+        .then((response) => {
+          this.$store.dispatch(
+            "Auth/login",
+            response.data.data.email,
+            response.data.data.password
+          );
+          this.$router.push("ui");
+          console.log("Zalogowano poprawnie");
+        })
+        .catch((error) => {
+          console.error(error);
+          const errors = error.response?.data.message;
+          if (errors === undefined) {
+            return alert("Wystąpił błąd. Przepraszamy");
+          }
+          // errors.reduce is not a function
+          const errMsg = errors.reduce((acc, cur) => {
+            return acc + " " + cur.message;
+          }, []);
+          alert(errMsg);
+        });
+    },
   },
 };
 </script>

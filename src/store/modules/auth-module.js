@@ -4,7 +4,8 @@ export default {
     namespaced: true,
     state: {
         token: null,
-        user: {}
+        user: {},
+        password: ""
     },
     mutations: {
         setToken(state, token) {
@@ -12,6 +13,9 @@ export default {
         },
         setUser(state, user) {
             state.user = user;
+        },
+        setPassword(state, password) {
+            state.password = password;
         }
     },
     actions: {
@@ -35,6 +39,12 @@ export default {
             if (cookieUser) {
                 commit("setUser", cookieUser)
             }
-        }
+        },
+        login({
+            state
+        }) {
+            setCookie("token", state.token, 1000000)
+            setCookie("user", JSON.stringify(state.user), 1000000)
+        },
     }
 }

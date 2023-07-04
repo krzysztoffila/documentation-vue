@@ -1,5 +1,6 @@
 <template>
   <aside
+    v-click-outside="onClickOutside"
     class="topnav left-menu p-3"
     id="myTopnav"
     :class="{ responsive: showAside }"
@@ -16,12 +17,19 @@
 
 <script>
 import { mapMutations, mapState } from "vuex";
-
 export default {
+  data() {
+    return {
+      active: false,
+    };
+  },
   computed: {
     ...mapState("LeftMenu", ["showAside"]),
   },
   methods: {
+    onClickOutside() {
+      this.active = false;
+    },
     ...mapMutations("LeftMenu", { toggleShowAside: "toggleShowAside" }),
   },
 };

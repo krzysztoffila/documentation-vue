@@ -6,7 +6,6 @@ export default {
     mutations: {
         toggleShowAside(state) {
             state.showAside = !state.showAside;
-        }
-    }
-
+        },
+    },
 }

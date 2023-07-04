@@ -55,7 +55,6 @@ export default {
   &:hover {
     color: #fff;
     text-decoration: underline;
-    transition: 0.2s all;
   }
 }
 @media screen and (max-width: 992px) {
@@ -66,6 +65,7 @@ export default {
     top: 107px;
     right: -100%;
     background-color: #343a40;
+    transition: 0.7s all;
   }
   .responsive .right-menu__list {
     right: 0;

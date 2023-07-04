@@ -63,7 +63,7 @@ export default {
     top: 107px;
     left: -100%;
     background-color: #343a40;
-    transition: 0.3s;
+    transition: 0.7s all;
   }
   .responsive .left-menu__list {
     left: 0;

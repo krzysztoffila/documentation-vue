@@ -44,6 +44,7 @@ export default {
     return {
       email: "",
       password: "",
+      username: "",
     };
   },
   methods: {
@@ -63,7 +64,7 @@ export default {
             response.data.data.password
           );
           this.$router.push("ui");
-          console.log("Zalogowano poprawnie");
+          alert(`Witaj ${this.email}`);
         })
         .catch((error) => {
           console.error(error);
@@ -71,11 +72,7 @@ export default {
           if (errors === undefined) {
             return alert("Wystąpił błąd. Przepraszamy");
           }
-          // errors.reduce is not a function
-          const errMsg = errors.reduce((acc, cur) => {
-            return acc + " " + cur.message;
-          }, []);
-          alert(errMsg);
+          alert(errors);
         });
     },
   },

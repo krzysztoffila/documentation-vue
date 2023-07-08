@@ -44,7 +44,6 @@ export default {
     return {
       email: "",
       password: "",
-      username: "",
     };
   },
   methods: {
@@ -64,10 +63,9 @@ export default {
             response.data.data.password
           );
           this.$router.push("ui");
-          alert(`Witaj ${this.email}`);
+          // window.location.href = "/ui";
         })
         .catch((error) => {
-          console.error(error);
           const errors = error.response?.data.message;
           if (errors === undefined) {
             return alert("Wystąpił błąd. Przepraszamy");

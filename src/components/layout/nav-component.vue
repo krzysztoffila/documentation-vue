@@ -9,19 +9,37 @@
         <b-nav-item active href="#">Docs</b-nav-item>
         <b-nav-item active href="#">About</b-nav-item>
       </b-navbar-nav>
-      <router-link to="/login"
+      <router-link @click="!isLoggedIn" to="/login"
         ><b-icon class="login__icon" icon="person-circle" height="20px"></b-icon
         ><span class="login__text">Login</span></router-link
       >
+      <!-- <b-button v-if="!isLoggedIn" type="submit" size="sm" class="logout__btn"
+        >Logout
+      </b-button> -->
     </b-navbar>
   </div>
 </template>
 
 <script>
 import Login from "@/views/login.vue";
+// import axios from "axios";
 export default {
+  data() {
+    return {
+      isLoggedIn: true,
+    };
+  },
   components: {
     Login,
+  },
+  methods: {
+    isLogged() {
+      if (userIsLogged) {
+        this.isLoggedIn = true;
+      } else {
+        this.isLoggedIn = false;
+      }
+    },
   },
 };
 </script>
@@ -30,5 +48,9 @@ export default {
 .login__icon,
 .login__text {
   color: #fff;
+}
+.logout__btn {
+  display: inline-block;
+  width: 70px;
 }
 </style>

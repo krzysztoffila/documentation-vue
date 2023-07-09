@@ -9,13 +9,13 @@
         <b-nav-item active href="#">Docs</b-nav-item>
         <b-nav-item active href="#">About</b-nav-item>
       </b-navbar-nav>
-      <router-link @click="!isLoggedIn" to="/login"
+      <router-link v-if="isLoggedIn" to="/login"
         ><b-icon class="login__icon" icon="person-circle" height="20px"></b-icon
         ><span class="login__text">Login</span></router-link
       >
-      <!-- <b-button v-if="!isLoggedIn" type="submit" size="sm" class="logout__btn"
+      <b-button v-else type="submit" size="sm" class="logout__btn"
         >Logout
-      </b-button> -->
+      </b-button>
     </b-navbar>
   </div>
 </template>
@@ -34,10 +34,13 @@ export default {
   },
   methods: {
     isLogged() {
-      if (userIsLogged) {
+      if (!this.isLoggedIn) {
         this.isLoggedIn = true;
-      } else {
+        console.log(`Obecna flaga isLoggedIn to: ${this.isLoggedIn}`);
+      }
+      if (this.isLoggedIn) {
         this.isLoggedIn = false;
+        console.log(`Obecna flaga isLoggedIn to: ${this.isLoggedIn}`);
       }
     },
   },

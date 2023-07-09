@@ -79,8 +79,7 @@ export default {
 
 <style>
 .login__container {
-  padding-top: 10%;
-  height: 100vh;
+  padding-top: 2%;
 }
 form {
   border: 3px solid #f1f1f1;

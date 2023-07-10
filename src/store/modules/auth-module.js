@@ -5,7 +5,12 @@ export default {
     state: {
         token: null,
         user: {},
-        password: ""
+        password: "",
+    },
+    getters: {
+        isLogged(state) {
+            return Object.keys(state.user).length > 0 && state.token !== null;
+        },
     },
     mutations: {
         setToken(state, token) {
@@ -43,8 +48,8 @@ export default {
         login({
             state
         }) {
-            setCookie("token", state.token, 1000000)
-            setCookie("user", JSON.stringify(state.user), 1000000)
+            setCookie("token", state.token, 1000000);
+            setCookie("user", JSON.stringify(state.user), 1000000);
         },
     }
 }

@@ -9,7 +9,7 @@
         <b-nav-item active href="#">Docs</b-nav-item>
         <b-nav-item active href="#">About</b-nav-item>
       </b-navbar-nav>
-      <router-link v-if="isLoggedIn" to="/login"
+      <router-link v-if="isLogged" to="/login"
         ><b-icon class="login__icon" icon="person-circle" height="20px"></b-icon
         ><span class="login__text">Login</span></router-link
       >
@@ -22,27 +22,17 @@
 
 <script>
 import Login from "@/views/login.vue";
-// import axios from "axios";
+import { mapGetters } from "vuex";
+
 export default {
   data() {
-    return {
-      isLoggedIn: true,
-    };
+    return {};
+  },
+  computed: {
+    ...mapGetters("auth", ["isLogged"]),
   },
   components: {
     Login,
-  },
-  methods: {
-    isLogged() {
-      if (!this.isLoggedIn) {
-        this.isLoggedIn = true;
-        console.log(`Obecna flaga isLoggedIn to: ${this.isLoggedIn}`);
-      }
-      if (this.isLoggedIn) {
-        this.isLoggedIn = false;
-        console.log(`Obecna flaga isLoggedIn to: ${this.isLoggedIn}`);
-      }
-    },
   },
 };
 </script>

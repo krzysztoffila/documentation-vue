@@ -9,7 +9,7 @@
         <b-nav-item active href="#">Docs</b-nav-item>
         <b-nav-item active href="#">About</b-nav-item>
       </b-navbar-nav>
-      <router-link v-if="isLogged" to="/login"
+      <router-link v-if="!isLogged" to="/login"
         ><b-icon class="login__icon" icon="person-circle" height="20px"></b-icon
         ><span class="login__text">Login</span></router-link
       >
@@ -29,7 +29,7 @@ export default {
     return {};
   },
   computed: {
-    ...mapGetters("auth", ["isLogged"]),
+    ...mapGetters("Auth", ["isLogged"]),
   },
   components: {
     Login,

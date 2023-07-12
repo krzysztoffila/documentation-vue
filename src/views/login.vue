@@ -63,6 +63,7 @@ export default {
             response.data.data.password
           );
           this.$router.push("ui");
+          alert(`Witaj uzytkowniku ${this.email}`);
           // window.location.href = "/ui";
         })
         .catch((error) => {

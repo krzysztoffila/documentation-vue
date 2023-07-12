@@ -91,7 +91,7 @@ export default {
             return alert("Wystąpił błąd. Przepraszamy");
           }
           const errMsg = errors.reduce((acc, cur) => {
-            return acc + " " + cur.message;
+            return `${acc} ${cur.message} \n`;
           }, []);
           alert(errMsg);
         });

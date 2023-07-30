@@ -10,8 +10,12 @@
         <b-nav-item active href="#">About</b-nav-item>
       </b-navbar-nav>
       <router-link v-if="!isLogged" to="/login"
-        ><b-icon class="login__icon" icon="person-circle" height="20px"></b-icon
-        ><span class="login__text">Login</span></router-link
+        ><b-icon
+          class="nav__login-icon"
+          icon="person-circle"
+          height="20px"
+        ></b-icon
+        ><span class="nav__login-text">Login</span></router-link
       >
       <b-button v-else type="submit" size="sm" class="logout__btn"
         >Logout
@@ -21,7 +25,6 @@
 </template>
 
 <script>
-import Login from "@/views/login.vue";
 import { mapGetters } from "vuex";
 
 export default {
@@ -31,15 +34,12 @@ export default {
   computed: {
     ...mapGetters("Auth", ["isLogged"]),
   },
-  components: {
-    Login,
-  },
 };
 </script>
 
 <style lang="scss">
-.login__icon,
-.login__text {
+.nav__login-icon,
+.nav__login-text {
   color: #fff;
 }
 .logout__btn {

@@ -57,14 +57,9 @@ export default {
           }
         )
         .then((response) => {
-          this.$store.dispatch(
-            "Auth/login",
-            response.data.data.email,
-            response.data.data.password
-          );
+          this.$store.dispatch("Auth/login", {});
           this.$router.push("ui");
           alert(`Witaj uzytkowniku ${this.email}`);
-          // window.location.href = "/ui";
         })
         .catch((error) => {
           const errors = error.response?.data.message;

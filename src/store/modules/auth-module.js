@@ -47,9 +47,9 @@ export default {
         },
         login({
             state
-        }) {
-            setCookie("token", state.token, 1000000);
-            setCookie("user", JSON.stringify(state.user), 1000000);
-        },
+        }, payload) {
+            state.token = payload.token;
+            state.user = payload.user
+        }
     }
 }

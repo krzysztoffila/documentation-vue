@@ -59,7 +59,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import { axiosApi } from "@/axios/axios.js";
 export default {
   data() {
     return {
@@ -71,16 +71,13 @@ export default {
   },
   methods: {
     registerUser() {
-      axios
-        .post(
-          "https://documentation-vue.projects.codennection.pl/api/auth/register",
-          {
-            name: this.name,
-            email: this.email,
-            password: this.password,
-            passwordConfirm: this.passwordConfirm,
-          }
-        )
+      axiosApi
+        .post(axiosApi.registerURL, {
+          name: this.name,
+          email: this.email,
+          password: this.password,
+          passwordConfirm: this.passwordConfirm,
+        })
         .then((response) => {
           this.$store.dispatch("Auth/register", response.data.data);
         })

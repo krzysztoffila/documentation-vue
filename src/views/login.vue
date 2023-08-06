@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import { axiosApi } from "@/axios/axios";
 export default {
   data() {
     return {
@@ -48,14 +48,11 @@ export default {
   },
   methods: {
     loginUser() {
-      axios
-        .post(
-          "https://documentation-vue.projects.codennection.pl/api/auth/login",
-          {
-            email: this.email,
-            password: this.password,
-          }
-        )
+      axiosApi
+        .post(axiosApi.loginURL, {
+          email: this.email,
+          password: this.password,
+        })
         .then((response) => {
           this.$store.dispatch("Auth/login", {});
           this.$router.push("ui");

@@ -54,7 +54,10 @@ export default {
           password: this.password,
         })
         .then((response) => {
-          this.$store.dispatch("Auth/login", {});
+          this.$store.dispatch("Auth/login", {
+            token: response.data.data.token,
+            user: response.data.data.user,
+          });
           this.$router.push("ui");
           alert(`Witaj uzytkowniku ${this.email}`);
         })

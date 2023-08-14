@@ -49,7 +49,7 @@ export default {
   methods: {
     loginUser() {
       axiosApi
-        .post(axiosApi.loginURL, {
+        .post('/auth/login', {
           email: this.email,
           password: this.password,
         })

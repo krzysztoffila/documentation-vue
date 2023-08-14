@@ -1,4 +1,5 @@
 import axios from 'axios';
+import getCookie from '@/helpers/get-cookie';
 
 const axiosOptions = {
     baseURL: `https://documentation-vue.projects.codennection.pl/api`,
@@ -8,7 +9,7 @@ const axiosOptions = {
     }
 }
 
-const tokenJWT = localStorage.getItem('token')
+const tokenJWT = getCookie('token')
 
 if(tokenJWT) {
     axiosOptions.headers.Authorization = `Bearer ${tokenJWT}`

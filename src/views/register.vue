@@ -72,7 +72,7 @@ export default {
   methods: {
     registerUser() {
       axiosApi
-        .post('/auth/register', {
+        .post("/auth/register", {
           name: this.name,
           email: this.email,
           password: this.password,

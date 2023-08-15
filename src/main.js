@@ -6,12 +6,14 @@ import {
   BootstrapVue,
   IconsPlugin
 } from 'bootstrap-vue';
-
+import VeeValidate from 'vee-validate';
 
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
+Vue.use(VeeValidate);
+
 
 new Vue({
   router,

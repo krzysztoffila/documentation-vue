@@ -53,6 +53,10 @@ export default {
                 token,
                 user
             } = payload;
+            if (!payload || !payload.token || !payload.user) {
+                console.error("Niepoprawny payload");
+                return
+            }
             commit("setToken", token);
             commit("setUser", user);
             setCookie("token", token, 1000000);

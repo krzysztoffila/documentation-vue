@@ -46,12 +46,17 @@ export default {
             }
         },
         login({
+            commit,
             state
         }, payload) {
-            setCookie("token", payload.token, 1000000);
-            setCookie("user", JSON.stringify(payload.user), 1000000);
-            state.token = payload.token;
-            state.user = payload.user
+            const {
+                token,
+                user
+            } = payload;
+            commit("setToken", token);
+            commit("setUser", user);
+            setCookie("token", token, 1000000);
+            setCookie("user", JSON.stringify(user), 1000000);
         }
     }
 }

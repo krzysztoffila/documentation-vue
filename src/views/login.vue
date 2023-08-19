@@ -61,7 +61,7 @@ export default {
             })
             .then(() => {
               this.$router.push("ui");
-              alert(`Witaj uzytkowniku ${this.email}`);
+              alert(`Witaj użytkowniku ${this.email}`);
             });
         })
         .catch((error) => {

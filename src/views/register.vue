@@ -79,7 +79,12 @@ export default {
           passwordConfirm: this.passwordConfirm,
         })
         .then((response) => {
-          this.$store.dispatch("Auth/register", response.data.data);
+          this.$store.dispatch("Auth/register", response.data.data).then(() => {
+            this.$router.push("ui");
+            alert(
+              `Udało się poprawnie zarejestować.\nTwoja nazwa użytkownika to: ${this.name}`
+            );
+          });
         })
         .catch((error) => {
           console.error(error);

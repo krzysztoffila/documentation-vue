@@ -67,7 +67,7 @@ export default {
     background-color: #343a40;
     transition: 0.7s all;
   }
-  .responsive .right-menu__list {
+  .right-menu--show .right-menu__list {
     right: 0;
   }
   .right-menu__container {

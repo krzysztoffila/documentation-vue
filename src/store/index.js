@@ -6,10 +6,6 @@ import RightMenu from "@/store/modules/right-menu-module"
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
   modules: {
     LeftMenu,
     RightMenu

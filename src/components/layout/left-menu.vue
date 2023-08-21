@@ -3,7 +3,7 @@
     v-click-outside="onClickOutside"
     class="topnav left-menu p-3"
     id="myTopnav"
-    :class="{ responsive: showAside }"
+    :class="{ 'left-menu--show': showAside }"
   >
     <ul class="left-menu__list">
       <li class="left-menu__list__link"><a href="#">Article 1</a></li>
@@ -73,7 +73,7 @@ export default {
     background-color: #343a40;
     transition: 0.7s all;
   }
-  .responsive .left-menu__list {
+  .left-menu--show .left-menu__list {
     left: 0;
   }
   .left-menu__container {

@@ -1,5 +1,5 @@
 <template>
-  <aside class="right-menu p-3" :class="{ responsive: showAside }">
+  <aside class="right-menu p-3" :class="{ 'right-menu--show': showAside }">
     <ul class="right-menu__list">
       <li class="right-menu__list__link">
         <a href="#">Podpunkt artykułu 1</a>

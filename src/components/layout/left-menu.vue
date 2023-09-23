@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     onClickOutside() {
-      this.active = false;
+      this.active = !this.active;
     },
     ...mapMutations("LeftMenu", { toggleShowAside: "toggleShowAside" }),
   },

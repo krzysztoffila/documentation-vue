@@ -1,5 +1,4 @@
 <template>
-  <!-- c-click-outside nie działa -->
   <aside
     v-click-outside="onClickOutside"
     class="topnav left-menu p-3"

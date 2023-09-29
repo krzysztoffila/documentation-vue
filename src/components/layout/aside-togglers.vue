@@ -1,11 +1,13 @@
 <template>
   <aside class="aside__tooglers__container" :class="{ responsive: showAside }">
-    <b-icon
+    <b-button
+      v-b-toggle.sidebar-1
       class="aside__left__icon d-lg-none"
       @click="toggleShowAside"
       icon="list"
       aria-hidden="true"
-    ></b-icon>
+      >Toggle Sidebar</b-button
+    >
     <b-icon
       class="aside__right__icon d-lg-none"
       @click="toggleShowRightAside"

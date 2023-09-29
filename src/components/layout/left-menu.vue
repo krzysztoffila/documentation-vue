@@ -5,13 +5,17 @@
     id="myTopnav"
     :class="{ 'left-menu--show': showAside }"
   >
-    <ul class="left-menu__list">
-      <li class="left-menu__list__link"><a href="#">Article 1</a></li>
-      <li class="left-menu__list__link"><a href="#">Article 2</a></li>
-      <li class="left-menu__list__link"><a href="#">Article 3</a></li>
-      <li class="left-menu__list__link"><a href="#">Article 4</a></li>
-      <li class="left-menu__list__link"><a href="#">Article 5</a></li>
-    </ul>
+    <b-sidebar id="sidebar-1" title="Sidebar" shadow>
+      <div class="px-3 py-2">
+        <ul class="left-menu__list">
+          <li class="left-menu__list__link"><a href="#">Article 1</a></li>
+          <li class="left-menu__list__link"><a href="#">Article 2</a></li>
+          <li class="left-menu__list__link"><a href="#">Article 3</a></li>
+          <li class="left-menu__list__link"><a href="#">Article 4</a></li>
+          <li class="left-menu__list__link"><a href="#">Article 5</a></li>
+        </ul>
+      </div>
+    </b-sidebar>
   </aside>
 </template>
 

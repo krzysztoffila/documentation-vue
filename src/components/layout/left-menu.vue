@@ -7,7 +7,7 @@
   >
     <b-sidebar id="sidebar-1" title="Sidebar" shadow>
       <div class="px-3 py-2 d-lg-none">
-        <article-list :show="showAside && true" />
+        <article-list :show="showAside" />
       </div>
     </b-sidebar>
 

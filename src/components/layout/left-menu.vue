@@ -6,26 +6,24 @@
     :class="{ 'left-menu--show': showAside }"
   >
     <b-sidebar id="sidebar-1" title="Sidebar" shadow>
-      <div class="px-3 py-2">
-        <ul class="left-menu__list">
-          <li class="left-menu__list__link"><a href="#">Article 1</a></li>
-          <li class="left-menu__list__link"><a href="#">Article 2</a></li>
-          <li class="left-menu__list__link"><a href="#">Article 3</a></li>
-          <li class="left-menu__list__link"><a href="#">Article 4</a></li>
-          <li class="left-menu__list__link"><a href="#">Article 5</a></li>
-        </ul>
+      <div class="px-3 py-2 d-lg-none">
+        <article-list :show="showAside && true" />
       </div>
     </b-sidebar>
+
+    <div class="px-3 py-2 d-none d-sm-block">
+      <article-list :show="true" />
+    </div>
   </aside>
 </template>
 
 <script>
 import { mapMutations, mapState } from "vuex";
+import ArticleList from "@/components/articles/article-list.vue";
+
 export default {
-  data() {
-    return {
-      active: false,
-    };
+  components: {
+    ArticleList,
   },
   computed: {
     ...mapState("LeftMenu", ["showAside"]),
@@ -45,47 +43,57 @@ export default {
   width: 20%;
   display: flex;
   align-items: left;
-}
-.left-menu__list {
-  width: 100%;
-  list-style-type: none;
-  letter-spacing: 1px;
-}
-.left-menu__list__link {
-  padding: 5px 0;
-}
-.left-menu__list__link a {
-  text-decoration: none;
-  color: #b3bcc3;
-  &:hover {
-    color: #fff;
-  }
-}
-.left-menu__toolbar {
-  list-style-type: none;
-}
-.icon {
-  display: none;
-}
-@media screen and (max-width: 992px) {
+
   .left-menu__list {
-    font-size: 12px;
-    width: 120px;
-    position: fixed;
-    top: 107px;
-    left: -100%;
-    background-color: #343a40;
-    transition: 0.7s all;
+    width: 100%;
+    list-style-type: none;
+    letter-spacing: 1px;
+
+    .left-menu__list__link {
+      padding: 5px 0;
+
+      a {
+        text-decoration: none;
+        color: #b3bcc3;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
   }
-  .left-menu--show .left-menu__list {
-    left: 0;
+
+  .left-menu__toolbar {
+    list-style-type: none;
   }
-  .left-menu__container {
-    width: 20%;
+
+  .icon {
+    display: none;
   }
-  .left-menu__toolbar .icon {
-    float: right;
-    display: block;
+
+  @media screen and (max-width: 992px) {
+    .left-menu__list {
+      font-size: 12px;
+      width: 120px;
+      position: fixed;
+      top: 107px;
+      left: -100%;
+      background-color: #343a40;
+      transition: 0.7s all;
+
+      &.left-menu--show {
+        left: 0;
+      }
+    }
+
+    .left-menu__container {
+      width: 20%;
+    }
+
+    .left-menu__toolbar .icon {
+      float: right;
+      display: block;
+    }
   }
 }
 </style>

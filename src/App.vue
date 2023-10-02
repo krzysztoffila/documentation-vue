@@ -3,6 +3,7 @@
     <header>
       <nav-component />
       <aside-togglers />
+      <Toast />
     </header>
     <main>
       <left-menu />
@@ -18,6 +19,7 @@ import NavComponent from "@/components/layout/nav-component.vue";
 import LeftMenu from "@/components/layout/left-menu.vue";
 import RightMenu from "@/components/layout/right-menu.vue";
 import AsideTogglers from "@/components/layout/aside-togglers.vue";
+import Toast from "@/components/toast/Toast.vue";
 
 export default {
   components: {
@@ -25,6 +27,7 @@ export default {
     AsideTogglers,
     LeftMenu,
     RightMenu,
+    Toast,
   },
   created() {
     this.$router.push("ui");

@@ -7,12 +7,18 @@
       aria-hidden="true"
       ><b-icon icon="layout-text-sidebar-reverse" aria-hidden="true"></b-icon
     ></b-button>
-    <b-icon
+    <b-button
+      v-b-toggle.sidebar-2
       class="aside__right__icon d-lg-none"
-      @click="toggleShowRightAside"
-      icon="three-dots"
+      icon="list"
       aria-hidden="true"
-    ></b-icon>
+    >
+      <b-icon
+        class="aside__right__icon d-lg-none"
+        icon="layout-text-sidebar"
+        aria-hidden="true"
+      ></b-icon
+    ></b-button>
   </aside>
 </template>
 
@@ -32,7 +38,6 @@ export default {};
     color: white;
   }
   .aside__right__icon {
-    padding-right: 38px;
     color: white;
   }
 }

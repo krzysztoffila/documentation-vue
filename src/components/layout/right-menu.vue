@@ -1,34 +1,29 @@
 <template>
-  <aside class="right-menu p-3" :class="{ 'right-menu--show': showAside }">
-    <ul class="right-menu__list">
-      <li class="right-menu__list__link">
-        <a href="#">Podpunkt artykułu 1</a>
-      </li>
-      <li class="right-menu__list__link">
-        <a href="#">Podpunkt artykułu 2</a>
-      </li>
-      <li class="right-menu__list__link">
-        <a href="#">Podpunkt artykułu 3</a>
-      </li>
-      <li class="right-menu__list__link">
-        <a href="#">Podpunkt artykułu 4</a>
-      </li>
-      <li class="right-menu__list__link">
-        <a href="#">Podpunkt artykułu 5</a>
-      </li>
-    </ul>
+  <aside class="right-menu p-3 right-menu--show">
+    <b-sidebar
+      id="sidebar-2"
+      title="Subsection"
+      bg-variant="dark"
+      text-variant="light"
+      right
+      shadow
+    >
+      <div class="px-3 py-2 d-lg-none">
+        <subsection-list :show="true" />
+      </div>
+    </b-sidebar>
+    <div class="px-3 py-2 d-none d-sm-block">
+      <subsection-list :show="true" />
+    </div>
   </aside>
 </template>
 
 <script>
-import { mapMutations, mapState } from "vuex";
+import SubsectionList from "@/components/articles/subsection-list.vue";
 
 export default {
-  computed: {
-    ...mapState("RightMenu", ["showAside"]),
-  },
-  methods: {
-    ...mapMutations("RightMenu", { toggleShowAside: "toggleShowRightAside" }),
+  components: {
+    SubsectionList,
   },
 };
 </script>
@@ -59,19 +54,13 @@ export default {
 }
 @media screen and (max-width: 992px) {
   .right-menu__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 12px;
-    width: 120px;
-    position: fixed;
-    top: 107px;
-    right: -100%;
     background-color: #343a40;
     transition: 0.7s all;
-  }
-  .right-menu--show .right-menu__list {
-    right: 0;
-  }
-  .right-menu__container {
-    width: 20%;
   }
 }
 </style>

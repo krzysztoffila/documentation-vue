@@ -3,8 +3,8 @@
     <b-sidebar
       id="sidebar-1"
       title="Articles"
-      bg-variant="light"
-      backdrop-variant="light"
+      bg-variant="dark"
+      text-variant="light"
       shadow
     >
       <div class="px-3 py-2 d-lg-none">

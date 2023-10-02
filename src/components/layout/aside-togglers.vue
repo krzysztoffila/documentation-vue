@@ -2,14 +2,12 @@
   <aside class="aside__tooglers__container" :class="{ responsive: showAside }">
     <b-button
       v-b-toggle.sidebar-1
-      bg-variant="dark"
-      backdrop-variant="dark"
       class="aside__left__icon d-lg-none"
       @click="toggleShowAside"
       icon="list"
       aria-hidden="true"
-      >Articles</b-button
-    >
+      ><b-icon icon="layout-text-sidebar-reverse" aria-hidden="true"></b-icon
+    ></b-button>
     <b-icon
       class="aside__right__icon d-lg-none"
       @click="toggleShowRightAside"
@@ -43,7 +41,6 @@ export default {
     justify-content: space-between;
   }
   .aside__left__icon {
-    padding-left: 32px;
     color: white;
   }
   .aside__right__icon {

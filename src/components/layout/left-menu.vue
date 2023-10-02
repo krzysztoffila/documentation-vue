@@ -1,16 +1,16 @@
 <template>
-  <aside
-    v-click-outside="onClickOutside"
-    class="topnav left-menu p-3"
-    id="myTopnav"
-    :class="{ 'left-menu--show': showAside }"
-  >
-    <b-sidebar id="sidebar-1" title="Sidebar" shadow>
+  <aside class="topnav left-menu p-3 left-menu--show" id="myTopnav">
+    <b-sidebar
+      id="sidebar-1"
+      title="Articles"
+      bg-variant="light"
+      backdrop-variant="light"
+      shadow
+    >
       <div class="px-3 py-2 d-lg-none">
-        <article-list :show="showAside" />
+        <article-list :show="true" />
       </div>
     </b-sidebar>
-
     <div class="px-3 py-2 d-none d-sm-block">
       <article-list :show="true" />
     </div>
@@ -29,9 +29,6 @@ export default {
     ...mapState("LeftMenu", ["showAside"]),
   },
   methods: {
-    onClickOutside() {
-      this.active = !this.active;
-    },
     ...mapMutations("LeftMenu", { toggleShowAside: "toggleShowAside" }),
   },
 };

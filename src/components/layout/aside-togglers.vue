@@ -1,9 +1,8 @@
 <template>
-  <aside class="aside__tooglers__container" :class="{ responsive: showAside }">
+  <aside class="aside__tooglers__container">
     <b-button
       v-b-toggle.sidebar-1
       class="aside__left__icon d-lg-none"
-      @click="toggleShowAside"
       icon="list"
       aria-hidden="true"
       ><b-icon icon="layout-text-sidebar-reverse" aria-hidden="true"></b-icon
@@ -18,18 +17,7 @@
 </template>
 
 <script>
-import { mapMutations, mapState } from "vuex";
-
-export default {
-  computed: {
-    ...mapState("LeftMenu", ["showAside"]),
-    ...mapState("RightMenu", ["showAside"]),
-  },
-  methods: {
-    ...mapMutations("LeftMenu", { toggleShowAside: "toggleShowAside" }),
-    ...mapMutations("RightMenu", { toggleShowRightAside: "toggleShowAside" }),
-  },
-};
+export default {};
 </script>
 
 <style>

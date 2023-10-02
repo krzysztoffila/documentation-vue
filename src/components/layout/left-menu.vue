@@ -18,18 +18,11 @@
 </template>
 
 <script>
-import { mapMutations, mapState } from "vuex";
 import ArticleList from "@/components/articles/article-list.vue";
 
 export default {
   components: {
     ArticleList,
-  },
-  computed: {
-    ...mapState("LeftMenu", ["showAside"]),
-  },
-  methods: {
-    ...mapMutations("LeftMenu", { toggleShowAside: "toggleShowAside" }),
   },
 };
 </script>

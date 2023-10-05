@@ -1,5 +1,6 @@
 import getCookie from '@/helpers/get-cookie';
 import setCookie from '@/helpers/set-cookie.js'
+import router from '@/router';
 export default {
     namespaced: true,
     state: {
@@ -61,6 +62,16 @@ export default {
             commit("setUser", user);
             setCookie("token", token, 1000000);
             setCookie("user", JSON.stringify(user), 1000000);
-        }
+        },
+        logout({
+            commit
+        }) {
+            commit("setToken", null);
+            commit("setUser", {});
+            setCookie("token", "", -1);
+            setCookie("user", "", -1);
+            alert(`Wylogowano !`);
+            router.push('/login');
+        },
     }
 }

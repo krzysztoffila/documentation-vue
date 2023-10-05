@@ -11,7 +11,7 @@ const axiosOptions = {
 
 const tokenJWT = getCookie('token')
 
-if(tokenJWT) {
+if (tokenJWT) {
     axiosOptions.headers.Authorization = `Bearer ${tokenJWT}`
 }
 

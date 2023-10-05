@@ -1,38 +1,89 @@
 <template>
-  <aside class="left-menu p-3">
-    <ul class="left-menu__list">
-      <li class="left-menu__list__link"><a href="#">Artykuł 1</a></li>
-      <li class="left-menu__list__link"><a href="#">Artykuł 2</a></li>
-      <li class="left-menu__list__link"><a href="#">Artykuł 3</a></li>
-      <li class="left-menu__list__link"><a href="#">Artykuł 4</a></li>
-      <li class="left-menu__list__link"><a href="#">Artykuł 5</a></li>
-    </ul>
+  <aside class="topnav left-menu p-3 left-menu--show" id="myTopnav">
+    <b-sidebar
+      id="sidebar-1"
+      title="Articles"
+      bg-variant="dark"
+      text-variant="light"
+      shadow
+    >
+      <div class="px-3 py-2 d-lg-none">
+        <article-list :show="true" />
+      </div>
+    </b-sidebar>
+    <div class="px-3 py-2 d-none d-md-none d-lg-block">
+      <article-list :show="true" />
+    </div>
   </aside>
 </template>
 
 <script>
-export default {};
+import ArticleList from "@/components/articles/article-list.vue";
+
+export default {
+  components: {
+    ArticleList,
+  },
+};
 </script>
 
 <style lang="scss">
 .left-menu {
+  position: relative;
   width: 20%;
   display: flex;
   align-items: left;
-}
-.left-menu__list {
-  width: 100%;
-  list-style-type: none;
-  letter-spacing: 1px;
-}
-.left-menu__list__link {
-  padding: 5px 0;
-}
-.left-menu__list__link a {
-  text-decoration: none;
-  color: #b3bcc3;
-  &:hover {
-    color: #fff;
+
+  .left-menu__list {
+    width: 100%;
+    list-style-type: none;
+    letter-spacing: 1px;
+
+    .left-menu__list__link {
+      padding: 5px 0;
+
+      a {
+        text-decoration: none;
+        color: #b3bcc3;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .left-menu__toolbar {
+    list-style-type: none;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 992px) {
+    .left-menu__list {
+      font-size: 12px;
+      width: 120px;
+      position: fixed;
+      top: 107px;
+      left: -100%;
+      background-color: #343a40;
+      transition: 0.7s all;
+
+      &.left-menu--show {
+        left: 0;
+      }
+    }
+
+    .left-menu__container {
+      width: 20%;
+    }
+
+    .left-menu__toolbar .icon {
+      float: right;
+      display: block;
+    }
   }
 }
 </style>

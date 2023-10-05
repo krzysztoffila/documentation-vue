@@ -2,6 +2,7 @@
   <div id="#app">
     <header>
       <nav-component />
+      <aside-togglers />
     </header>
     <main>
       <left-menu />
@@ -16,10 +17,12 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import NavComponent from "@/components/layout/nav-component.vue";
 import LeftMenu from "@/components/layout/left-menu.vue";
 import RightMenu from "@/components/layout/right-menu.vue";
+import AsideTogglers from "@/components/layout/aside-togglers.vue";
 
 export default {
   components: {
     NavComponent,
+    AsideTogglers,
     LeftMenu,
     RightMenu,
   },

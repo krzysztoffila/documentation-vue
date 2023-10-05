@@ -24,11 +24,8 @@
           <input type="checkbox" checked="checked" name="remember" /> Remember
           me
         </label>
-      </div>
-      <div class="container" style="background-color: #f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
         <router-link to="/register"
-          ><span class="psw"
+          ><span class="login__container-register-link"
             >Not Registred?<a href="#">Register</a></span
           ></router-link
         >
@@ -76,9 +73,15 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .login__container {
   padding-top: 2%;
+  &-register-link {
+    display: flex;
+    align-self: flex-end;
+    gap: 10px;
+    color: white;
+  }
 }
 form {
   border: 3px solid #f1f1f1;

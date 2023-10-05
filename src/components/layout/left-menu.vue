@@ -11,7 +11,7 @@
         <article-list :show="true" />
       </div>
     </b-sidebar>
-    <div class="px-3 py-2 d-none d-sm-block">
+    <div class="px-3 py-2 d-none d-md-none d-lg-block">
       <article-list :show="true" />
     </div>
   </aside>

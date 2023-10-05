@@ -27,7 +27,7 @@ export default {};
 </script>
 
 <style>
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .aside__tooglers__container {
     padding: 15px 0;
     background: #343a40;

@@ -12,7 +12,7 @@
         <subsection-list :show="true" />
       </div>
     </b-sidebar>
-    <div class="px-3 py-2 d-none d-sm-block">
+    <div class="px-3 py-2 px-3 py-2 d-none d-md-none d-lg-block">
       <subsection-list :show="true" />
     </div>
   </aside>
@@ -59,7 +59,6 @@ export default {
     justify-content: center;
     align-items: center;
     font-size: 12px;
-    background-color: #343a40;
     transition: 0.7s all;
   }
 }

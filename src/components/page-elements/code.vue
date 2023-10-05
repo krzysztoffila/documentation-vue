@@ -57,8 +57,16 @@ export default {
     },
     async copyHandler() {
       try {
+        if (this.disableButton) {
+          return;
+        }
+        this.disableButton = true;
         await copyToClipboard(this.coloredCode);
         this.textButton = "Copied!";
+        setTimeout(() => {
+          this.textButton = "Copy";
+          this.disableButton = false;
+        }, 3000);
       } catch (e) {
         console.error(e);
         this.textButton = "Error!";
@@ -70,7 +78,7 @@ export default {
 
 <style lang="scss">
 pre {
-  min-height: 400px;
+  min-height: 200px;
   background-color: #f0f0f0;
   border: 1px solid black;
 }

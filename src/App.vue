@@ -28,6 +28,7 @@ export default {
   },
   created() {
     this.$router.push("ui");
+    this.$store.dispatch("Auth/autoLogin");
   },
 };
 </script>

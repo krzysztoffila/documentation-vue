@@ -1,4 +1,4 @@
-template>
+<template>
   <div>
     <b-toast
       v-for="(toast, i) in toasts"
@@ -13,15 +13,15 @@ template>
   </div>
 </template>
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex'
 export default {
   data() {
     return {
-      defaultVariant: "info",
-    };
+      defaultVariant: 'info',
+    }
   },
   computed: {
-    ...mapState("Toast", ["toasts"]),
+    ...mapState('Toast', ['toasts']),
   },
-};
+}
 </script>

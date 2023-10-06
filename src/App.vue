@@ -3,6 +3,7 @@
     <header>
       <nav-component />
       <aside-togglers />
+      <toast />
     </header>
     <main>
       <left-menu />
@@ -12,12 +13,13 @@
   </div>
 </template>
 <script>
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
-import NavComponent from "@/components/layout/nav-component.vue";
-import LeftMenu from "@/components/layout/left-menu.vue";
-import RightMenu from "@/components/layout/right-menu.vue";
-import AsideTogglers from "@/components/layout/aside-togglers.vue";
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import NavComponent from '@/components/layout/nav-component.vue'
+import LeftMenu from '@/components/layout/left-menu.vue'
+import RightMenu from '@/components/layout/right-menu.vue'
+import AsideTogglers from '@/components/layout/aside-togglers.vue'
+import Toast from '@/components/toast/toast.vue'
 
 export default {
   components: {
@@ -25,12 +27,13 @@ export default {
     AsideTogglers,
     LeftMenu,
     RightMenu,
+    Toast,
   },
   created() {
-    this.$router.push("ui");
-    this.$store.dispatch("Auth/autoLogin");
+    this.$router.push('ui')
+    this.$store.dispatch('Auth/autoLogin')
   },
-};
+}
 </script>
 
 <style lang="scss">

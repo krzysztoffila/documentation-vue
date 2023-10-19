@@ -36,16 +36,17 @@
 
 <script>
 import { axiosApi } from '@/axios/axios'
-import Toast from '@/components/toast/toast-component.vue'
+import { mapMutations } from "vuex";
 export default {
-  components: { Toast },
   data() {
     return {
       email: '',
       password: '',
+      user: ''
     }
   },
   methods: {
+    ...mapMutations('Toast', ['addToast']),
     loginUser() {
       axiosApi
         .post('/auth/login', {
@@ -59,24 +60,22 @@ export default {
               user: response.data.data.user,
             })
             .then(() => {
-              this.$router.push('ui')
-              commit(
-                `Toast/addToast`,
-                {
-                  message: `Witaj użytkowniku ${this.email}`,
-                },
-                {
-                  root: true,
-                }
-              )
-            })
+            this.$router.push('ui');
+            this.addToast({
+              message: `Witaj użytkowniku ${this.email}`,
+            });
+          });
         })
         .catch((error) => {
           const errors = error.response?.data.message
           if (errors === undefined) {
-            return alert('Wystąpił błąd. Przepraszamy')
+            return this.addToast({
+              message: 'Wystąpił błąd :( Przepraszamy, spróbuj ponownie później.',
+            });
           }
-          alert(errors)
+          this.addToast({
+              message: errors,
+            });
         })
     },
   },

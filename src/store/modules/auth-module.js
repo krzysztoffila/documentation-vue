@@ -70,7 +70,13 @@ export default {
             commit("setUser", {});
             setCookie("token", "", -1);
             setCookie("user", "", -1);
-            alert(`Wylogowano !`);
+            commit(
+                `Toast/addToast`, {
+                    message: `Wylogowano!`,
+                }, {
+                    root: true,
+                }
+            );
             router.push('/login');
         },
     }

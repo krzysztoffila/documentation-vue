@@ -3,7 +3,7 @@
     <header>
       <nav-component />
       <aside-togglers />
-      <toast />
+      <Toast />
     </header>
     <main>
       <left-menu />
@@ -19,7 +19,7 @@ import NavComponent from '@/components/layout/nav-component.vue'
 import LeftMenu from '@/components/layout/left-menu.vue'
 import RightMenu from '@/components/layout/right-menu.vue'
 import AsideTogglers from '@/components/layout/aside-togglers.vue'
-import Toast from '@/components/toast/toast.vue'
+import Toast from '@/components/toast/toast-component.vue'
 
 export default {
   components: {
@@ -42,5 +42,8 @@ main {
   justify-content: space-between;
   color: rgba(255, 255, 255, 0.87);
   background-color: #1a1a1a;
+}
+button{
+  display: flex;
 }
 </style>

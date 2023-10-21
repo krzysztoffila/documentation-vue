@@ -19,7 +19,7 @@
           name="psw"
           required
         />
-        <button type="submit">Login</button>
+        <button class="login__button" type="submit">Login</button>
         <label>
           <input type="checkbox" checked="checked" name="remember" /> Remember
           me
@@ -35,42 +35,51 @@
 </template>
 
 <script>
-import { axiosApi } from "@/axios/axios";
+import { axiosApi } from '@/axios/axios'
+import { mapMutations } from "vuex";
 export default {
   data() {
     return {
-      email: "",
-      password: "",
-    };
+      email: '',
+      password: '',
+      user: ''
+    }
   },
   methods: {
+    ...mapMutations('Toast', ['addToast']),
     loginUser() {
       axiosApi
-        .post("/auth/login", {
+        .post('/auth/login', {
           email: this.email,
           password: this.password,
         })
         .then((response) => {
           this.$store
-            .dispatch("Auth/login", {
+            .dispatch('Auth/login', {
               token: response.data.data.token,
               user: response.data.data.user,
             })
             .then(() => {
-              this.$router.push("ui");
-              alert(`Witaj użytkowniku ${this.email}`);
+            this.$router.push('ui');
+            this.addToast({
+              message: `Witaj użytkowniku ${this.email}`,
             });
+          });
         })
         .catch((error) => {
-          const errors = error.response?.data.message;
+          const errors = error.response?.data.message
           if (errors === undefined) {
-            return alert("Wystąpił błąd. Przepraszamy");
+            return this.addToast({
+              message: 'Wystąpił błąd :( Przepraszamy, spróbuj ponownie później.',
+            });
           }
-          alert(errors);
-        });
+          this.addToast({
+              message: errors,
+            });
+        })
     },
   },
-};
+}
 </script>
 
 <style lang="scss">
@@ -87,8 +96,8 @@ form {
   border: 3px solid #f1f1f1;
 }
 
-input[type="text"],
-input[type="password"] {
+input[type='text'],
+input[type='password'] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -97,7 +106,7 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
-button {
+.login__button {
   background-color: #04aa6d;
   color: white;
   padding: 14px 20px;

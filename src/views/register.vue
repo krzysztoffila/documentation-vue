@@ -60,6 +60,8 @@
 
 <script>
 import { axiosApi } from "@/axios/axios.js";
+import { mapMutations } from "vuex";
+
 export default {
   data() {
     return {
@@ -70,6 +72,7 @@ export default {
     };
   },
   methods: {
+    ...mapMutations('Toast', ['addToast']),
     registerUser() {
       axiosApi
         .post("/auth/register", {
@@ -81,9 +84,9 @@ export default {
         .then((response) => {
           this.$store.dispatch("Auth/register", response.data.data).then(() => {
             this.$router.push("ui");
-            alert(
-              `Udało się poprawnie zarejestować.\nTwoja nazwa użytkownika to: ${this.name}`
-            );
+            this.addToast({
+              message: `Udało się poprawnie zarejestować.\nTwoja nazwa użytkownika to: ${this.name}`,
+            });
           });
         })
         .catch((error) => {
@@ -95,7 +98,9 @@ export default {
           const errMsg = errors.reduce((acc, cur) => {
             return `${acc} ${cur.message} \n`;
           }, []);
-          alert(errMsg);
+          this.addToast({
+              message: errMsg,
+            });
         });
     },
   },

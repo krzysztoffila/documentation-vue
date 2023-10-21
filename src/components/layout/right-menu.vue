@@ -12,20 +12,20 @@
         <subsection-list :show="true" />
       </div>
     </b-sidebar>
-    <div class="px-3 py-2 px-3 py-2 d-none d-md-none d-lg-block">
+    <div class="px-3 py-2 d-none d-md-none d-lg-block">
       <subsection-list :show="true" />
     </div>
   </aside>
 </template>
 
 <script>
-import SubsectionList from "@/components/articles/subsection-list.vue";
+import SubsectionList from '@/components/articles/subsection-list.vue'
 
 export default {
   components: {
     SubsectionList,
   },
-};
+}
 </script>
 
 <style lang="scss">
@@ -45,7 +45,6 @@ export default {
   font-size: 12px;
   padding-left: 5px;
   text-decoration: none;
-
   color: #b3bcc3;
   text-underline-offset: 5px;
   &:hover {
@@ -61,12 +60,6 @@ export default {
     align-items: center;
     font-size: 12px;
     transition: 0.7s all;
-  color: #6c757d;
-  &:hover {
-    color: #212529;
-    border-left: 5px solid #198754;
-    border-radius: 2px;
-
   }
 }
 </style>

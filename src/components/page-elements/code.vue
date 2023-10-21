@@ -11,20 +11,7 @@
 </template>
 
 <script>
-import Vue from "vue";
-import VueHighlightJS from "vue-highlight.js";
-import css from "highlight.js/lib/languages/css";
-import javascript from "highlight.js/lib/languages/javascript";
-import vue from "vue-highlight.js/lib/languages/vue";
-import "highlight.js/styles/default.css";
 import copyToClipboard from "@/helpers/copy-to-clipboard.js";
-Vue.use(VueHighlightJS, {
-  languages: {
-    css,
-    javascript,
-    vue,
-  },
-});
 export default {
   props: {
     code: String,
@@ -33,14 +20,7 @@ export default {
   data() {
     return {
       copied: false,
-      supportsCB: false,
-      textButton: "Copy",
     };
-  },
-  created() {
-    if (navigator.clipboard) {
-      this.supportsCB = true;
-    }
   },
   computed: {
     coloredCode() {
@@ -48,9 +28,6 @@ export default {
     },
   },
   methods: {
-    toggle() {
-      this.isActive = !this.enable;
-    },
     copyToClipboard,
     setCopied(copied) {
       this.copied = copied;
@@ -80,24 +57,14 @@ export default {
 pre {
   min-height: 200px;
   background-color: #f0f0f0;
+  display: flex;
+  min-height: 300px;
+  background-color: #d3d3d3;
   border: 1px solid black;
 }
-.code__clipboard-container {
-  display: flex;
+.code__clipboard__container {
+  display: inline-block;
   justify-content: right;
   text-align: right;
-  & button {
-    justify-content: right;
-    cursor: pointer;
-    color: #d3d3d3;
-    background-color: #6c757d;
-    &:hover {
-      color: #f8f9fa;
-      background-color: #343a40;
-    }
-  }
-}
-.code__highlight-code {
-  border: none;
 }
 </style>

@@ -38,6 +38,8 @@ export default {
 
 <style lang="scss">
 main {
+  // colors: #242424;
+  // colors: #2f2f2f;
   display: flex;
   justify-content: space-between;
   color: rgba(255, 255, 255, 0.87);

@@ -45,6 +45,7 @@ export default {
   font-size: 12px;
   padding-left: 5px;
   text-decoration: none;
+
   color: #b3bcc3;
   text-underline-offset: 5px;
   &:hover {
@@ -60,6 +61,12 @@ export default {
     align-items: center;
     font-size: 12px;
     transition: 0.7s all;
+  color: #6c757d;
+  &:hover {
+    color: #212529;
+    border-left: 5px solid #198754;
+    border-radius: 2px;
+
   }
 }
 </style>

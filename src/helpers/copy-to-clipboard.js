@@ -1,4 +1,3 @@
-export default async function copyToClipboard(content) {
-    return await
-    navigator.clipboard.writeText(content.toString())
+export default function copyToClipboard(content) {
+    //ma kopiować do schowka
 }

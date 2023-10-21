@@ -1,20 +1,20 @@
 <template>
   <div class="pagination p-3">
     <b-button
-      :class="[('prev', prev && `${prev}`)]"
-      class="pagination__left-button"
-      variant="outline-primary"
+      v-if="prev"
+      class="pagination__button--prev"
+      variant="outline-light"
     >
       <b-icon class="pagination__left-icon" icon="chevron-left"></b-icon>
-      Poprzedni
+      Previous
     </b-button>
     <b-button
-      :class="[('next', next && `${next}`)]"
-      class="pagination__right-button"
-      variant="outline-primary"
+      v-if="next"
+      class="pagination__button--next"
+      variant="outline-light"
     >
+      Next
       <b-icon class="pagination__right-icon" icon="chevron-right"></b-icon>
-      Następny
     </b-button>
   </div>
 </template>

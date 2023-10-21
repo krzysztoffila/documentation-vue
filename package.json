@@ -7,17 +7,24 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^1.5.1",
+    "bootstrap-icons-vue": "^1.8.1",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
+    "cors": "^2.8.5",
+    "vee-validate": "^2.2.15",
+
     "vue": "^2.6.14",
+    "vue-axios": "^3.5.2",
+    "vue-highlight.js": "^3.1.0",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-router": "^5.0.8",
     "@vue/cli-plugin-vuex": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
+    "@vue/cli-service": "^5.0.8",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "vue-template-compiler": "^2.6.14"

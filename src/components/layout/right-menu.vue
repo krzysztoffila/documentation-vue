@@ -1,27 +1,31 @@
 <template>
-  <aside class="right-menu p-3">
-    <ul class="right-menu__list">
-      <li class="right-menu__list__link">
-        <a href="#">Podpunkt artykułu 1</a>
-      </li>
-      <li class="right-menu__list__link">
-        <a href="#">Podpunkt artykułu 2</a>
-      </li>
-      <li class="right-menu__list__link">
-        <a href="#">Podpunkt artykułu 3</a>
-      </li>
-      <li class="right-menu__list__link">
-        <a href="#">Podpunkt artykułu 4</a>
-      </li>
-      <li class="right-menu__list__link">
-        <a href="#">Podpunkt artykułu 5</a>
-      </li>
-    </ul>
+  <aside class="right-menu p-3 right-menu--show">
+    <b-sidebar
+      id="sidebar-2"
+      title="Subsection"
+      bg-variant="dark"
+      text-variant="light"
+      right
+      shadow
+    >
+      <div class="px-3 py-2 d-lg-none">
+        <subsection-list :show="true" />
+      </div>
+    </b-sidebar>
+    <div class="px-3 py-2 px-3 py-2 d-none d-md-none d-lg-block">
+      <subsection-list :show="true" />
+    </div>
   </aside>
 </template>
 
 <script>
-export default {};
+import SubsectionList from "@/components/articles/subsection-list.vue";
+
+export default {
+  components: {
+    SubsectionList,
+  },
+};
 </script>
 
 <style lang="scss">
@@ -33,19 +37,36 @@ export default {};
 .right-menu__list {
   width: 100%;
   list-style-type: none;
-  letter-spacing: 1px;
 }
 .right-menu__list__link {
   padding: 5px 0;
 }
 .right-menu__list__link a {
+  font-size: 12px;
   padding-left: 5px;
   text-decoration: none;
+
+  color: #b3bcc3;
+  text-underline-offset: 5px;
+  &:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+@media screen and (max-width: 992px) {
+  .right-menu__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    transition: 0.7s all;
   color: #6c757d;
   &:hover {
     color: #212529;
     border-left: 5px solid #198754;
     border-radius: 2px;
+
   }
 }
 </style>

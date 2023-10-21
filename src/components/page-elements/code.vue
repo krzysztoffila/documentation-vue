@@ -1,12 +1,13 @@
 <template>
-  <pre>
-    <div class="code__clipboard__container">
-        <div>Copied!</div>
-        <!-- <svg></svg> -->
-    </div>
-    <code>{{coloredCode}}
-    </code>
-</pre>
+  <pre class="m-3">
+  <div class="code__clipboard-container">
+    <p class="m-2">{{extension}}</p>
+    <button class="btn mx-2 px-4" v-if="supportsCB" @click="copyHandler">{{textButton}}</button>
+  </div>
+      <highlight-code class="code__highlight-code" lang="javascript">
+			{{coloredCode}}
+		</highlight-code>
+  </pre>
 </template>
 
 <script>
@@ -31,12 +32,31 @@ export default {
     setCopied(copied) {
       this.copied = copied;
     },
+    async copyHandler() {
+      try {
+        if (this.disableButton) {
+          return;
+        }
+        this.disableButton = true;
+        await copyToClipboard(this.coloredCode);
+        this.textButton = "Copied!";
+        setTimeout(() => {
+          this.textButton = "Copy";
+          this.disableButton = false;
+        }, 3000);
+      } catch (e) {
+        console.error(e);
+        this.textButton = "Error!";
+      }
+    },
   },
 };
 </script>
 
 <style lang="scss">
 pre {
+  min-height: 200px;
+  background-color: #f0f0f0;
   display: flex;
   min-height: 300px;
   background-color: #d3d3d3;

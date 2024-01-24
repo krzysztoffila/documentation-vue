@@ -1,21 +1,21 @@
 # Vue Documentation
 
-Vue Documentation to narzędzie przeznaczone do tworzenia dokumentacji technicznej, skupiające się na zaawansowanym JavaScript.
+Vue Documentation is a tool designed for creating technical documentation, focusing on advanced JavaScript.
 
-Jest to mój drugi projekt w Vue.js który kodowałem pod okiem doświadczonego programisty. Komunikowaliśmy się ze sobą za pomocą programu JIRA, gdzie wrzucał mi zadania. Raz w tygodniu również mieliśmy meeting co można udoskonalić.
+This is my second project in Vue.js that I coded under the guidance of an experienced programmer. We communicated using JIRA, where he assigned tasks to me. Additionally, we had weekly meetings to discuss possible improvements.
 
-## Przegląd projektu
+## Project Overview
 
-Projekt Vue Documentation poświęcony jest dostarczaniu kompleksowej dokumentacji technicznej dla zaawansowanych koncepcji JavaScript. Narzędzie zawiera szereg technologii usprawniających proces tworzenia dokumentacji, czyniąc ją dostępną i pouczającą.
+The Vue Documentation project is dedicated to providing comprehensive technical documentation for advanced JavaScript concepts. The tool incorporates various technologies to enhance the documentation creation process, making it accessible and informative.
 
-## Technologie
+## Technologies
 
-- **HTML:** Struktura dla stron dokumentacji.
-- **SCSS:** Stylizacja poprawiająca atrakcyjność wizualną dokumentacji.
-- **JavaScript:** Zwiększa interaktywność i funkcjonalność.
-- **Vue.js:** Progresywny framework JavaScript do tworzenia interfejsów użytkownika.
-- **Axios:** Służy do wykonywania żądań HTTP, ułatwiając pobieranie danych.
-- **Bootstrap Vue:** Framework do budowania responsywnych i mobilnych aplikacji.
+- **HTML:** Structure for documentation pages.
+- **SCSS:** Styling to enhance the visual appeal of the documentation.
+- **JavaScript:** Enhances interactivity and functionality.
+- **Vue.js:** Progressive JavaScript framework for building user interfaces.
+- **Axios:** Used for making HTTP requests, facilitating data retrieval.
+- **Bootstrap Vue:** Framework for building responsive and mobile applications.
 
 ## Project setup
 ```
@@ -32,7 +32,8 @@ npm run serve
 npm run build
 ```
 
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-Dziękuję za zapoznanie się z projektem! Jeśli masz jakieś pytania lub sugestie, skontaktuj się! Udanego kodowania!
+Thank you for exploring the project! If you have any questions or suggestions, feel free to contact me! Happy coding!
